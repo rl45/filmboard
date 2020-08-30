@@ -1,6 +1,6 @@
 {
-    "api": "http://localhost:4000",
-    "appUrl": "http://localhost:3000",
+    "api": "https://filmboard-api-demo.herokuapp.com",
+    "appUrl": "https://filmboard-app.herokuapp.com",
     "appTitle": "Filmboard.io",
     "packages": [{
         "id": 1,
