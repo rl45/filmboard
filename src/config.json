@@ -1,0 +1,62 @@
+{
+    "api": "http://localhost:4000",
+    "appUrl": "http://localhost:3000",
+    "appTitle": "Filmboard.io",
+    "packages": [{
+        "id": 1,
+        "name": "Free",
+        "projectsLimit": true,
+        "projects": 7,
+        "space": 50,
+        "moodboardItems": 5,
+        "price": 0,
+        "productId": "prod_Hvaj8uk2S4Nww5",
+        "priceId": "price_1HLjY8BSe2uLokOsMEipp8JK",
+        "type": "free"
+    },{
+        "id": 2,
+        "name": "Monthly Plus",
+        "projectsLimit": true,
+        "projects": 15,
+        "space": 200,
+        "moodboardItems": 20,
+        "price": 9,
+        "productId": "prod_HvalW0W9B89bGb",
+        "priceId": "price_1HLja8BSe2uLokOsNt6jV6bT",
+        "type": "monthly"
+    },{
+        "id": 3,
+        "name": "Monthly Premium",
+        "projectsLimit": false,
+        "projects": 0,
+        "space": 2048,
+        "moodboardItems": 20,
+        "price": 15,
+        "productId": "prod_HvansS7dMC1qmu",
+        "priceId": "price_1HLjbsBSe2uLokOs0J35f7FI",
+        "type": "monthly"
+    },{
+        "id": 4,
+        "name": "Annually Plus",
+        "projectsLimit": true,
+        "projects": 15,
+        "space": 200,
+        "moodboardItems": 20,
+        "price": 108,
+        "productId": "prod_HvaoKRNKLG5xKJ",
+        "priceId": "price_1HLjcdBSe2uLokOsIn6gG9Ob",
+        "type": "annually"
+    },{
+        "id": 5,
+        "name": "Annually Premium",
+        "projectsLimit": false,
+        "projects": 0,
+        "space": 2048,
+        "moodboardItems": 20,
+        "price": 150,
+        "productId": "prod_HvaoW25xMkzMMp",
+        "priceId": "price_1HLjdHBSe2uLokOsz0TSiyiw",
+        "type": "annually"
+    }],
+    "stripePublishableKey": "pk_test_6GRQZUsigC9HQbudaLWbbMzg00OEFB8bnj"
+}

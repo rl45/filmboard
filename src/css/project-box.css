@@ -1,0 +1,37 @@
+
+.project-box {
+    float: left;
+    margin: 5px;
+    padding: 10px 25px;
+    width: 340px;
+    max-width: 340px;
+    min-width: 340px;
+    height: auto;
+    background-color: #343a40;
+    border-radius: 5px;
+}
+.project-box:hover {
+    box-shadow: 0 0 5px #d7d7d7;
+    cursor: pointer;
+}
+.project-box .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical;
+    font-size: 25px;
+}
+.project-box:hover .title {
+    color: rgb(56,78,210);
+}
+.project-box .date {
+    font-size: 12px;
+    color: #888888;
+}
+.counts strong {
+    font-weight: normal;
+    font-size: 18px;
+    color: rgb(56,78,210);
+    margin-right: 10px
+}

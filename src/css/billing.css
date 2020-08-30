@@ -1,0 +1,55 @@
+/*.billing {*/
+/*    margin-top: 20px;*/
+/*    width: 800px;*/
+/*}*/
+.pkgs-row {
+    margin-top: 30px;
+}
+.pkg {
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    height: 45vh;
+    /*background-color: #343a40!important;*/
+}
+.pkg:hover {
+    box-shadow: 0 0 5px #d7d7d7;
+}
+.pkg-active {
+    color: rgb(56,78,210);
+}
+.pkg-name {
+    font-size: 24px;
+    color: rgb(56,78,210);
+}
+.pkg-price {
+    font-size: 24px;
+    color: rgb(56,78,210);
+}
+.billing-info {
+    font-style: italic;
+    color: #757575;
+}
+.billing ul {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    align-content: left;
+}
+.billing li {
+    text-align: left!important;
+}
+.btn-pkg-choose {
+    margin-top: 30px;
+}
+.btn-back {
+    margin-right: 20px;
+    cursor: pointer;
+}
+.pkg-duration {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+}
