@@ -28,7 +28,7 @@ export default function Upload(props) {
 
     const renderFiles = () =>
         files.length > 0 ?
-            files.map(file => <UploadedFile file={file} />)
+            files.map(file => <UploadedFile key={file._id} file={file} />)
             : <div className="not-found">No files uploaded.</div>
 
     return (

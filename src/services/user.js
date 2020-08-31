@@ -62,7 +62,6 @@ export default class {
                 }
             })
             .catch(err => {
-                console.log(err);
                 result.error = err.response.data;
             });
 

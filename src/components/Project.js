@@ -74,34 +74,46 @@ export default function Project(props) {
         document.querySelectorAll(`.moodboard .item`).forEach(x => {
             const type = x.querySelector(`.item-type`).value;
             if (type === 'video') {
-                moodboard.push({
-                    id: x.querySelector(`.item-id`).value || '',
-                    type: type,
-                    url: x.querySelector(`.item-url`).value || '',
-                    title: x.querySelector(`.item-title`).value || '',
-                    description: x.querySelector(`.item-description`).value || ''
-                });
+                let title = x.querySelector(`.item-title`).value || '';
+                let url = x.querySelector(`.item-url`).value || '';
+                if(title && title.length > 0 && url && url.length > 0) {
+                    moodboard.push({
+                        id: x.querySelector(`.item-id`).value || '',
+                        type: type,
+                        url: url,
+                        title: title,
+                        description: x.querySelector(`.item-description`).value || ''
+                    });
+                }
             }
 
             if (type === 'audio' || type === 'image') {
-                moodboard.push({
-                    id: x.querySelector(`.item-id`).value || '',
-                    type: type,
-                    file: x.querySelector(`.item-file`).files[0] || null,
-                    title: x.querySelector(`.item-title`).value || '',
-                    description: x.querySelector(`.item-description`).value || ''
-                });
+                let title = x.querySelector(`.item-title`).value || '';
+                let file = x.querySelector(`.item-file`).files[0] || null;
+                if(title && title.length > 0 && file) {
+                    moodboard.push({
+                        id: x.querySelector(`.item-id`).value || '',
+                        type: type,
+                        file: file,
+                        title: title,
+                        description: x.querySelector(`.item-description`).value || ''
+                    });
+                }
             }
         });
 
         let storyboard = [];
         document.querySelectorAll(`.storyboard .item`).forEach(x => {
-            storyboard.push({
-                id: x.querySelector(`.item-id`).value || '',
-                file: x.querySelector(`.item-file`).files[0] || null,
-                title: x.querySelector(`.item-title`).value || '',
-                description: x.querySelector(`.item-description`).value || ''
-            });
+            let title = x.querySelector(`.item-title`).value || '';
+            let file = x.querySelector(`.item-file`).files[0] || null;
+            if(title && title.length > 0 && file) {
+                storyboard.push({
+                    id: x.querySelector(`.item-id`).value || '',
+                    file: file,
+                    title: title,
+                    description: x.querySelector(`.item-description`).value || ''
+                });
+            }
         });
 
         // if (!moodboard || moodboard.length === 0) {

@@ -45,7 +45,7 @@ export default function MoodboardImage(props) {
                         </div>
                         <div className="form-group">
                             <input type="text" className="form-control item-title"
-                                   placeholder="Enter image title"
+                                   placeholder="Enter image title (required)"
                                    value={title} onChange={e => setTitle(e.target.value)}/>
                         </div>
                         <div className="form-group">

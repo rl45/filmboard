@@ -111,7 +111,7 @@ export default function Header(props) {
 
     const getPackageName = () => {
         const pkgId = session.get('user').package;
-        return pkgId;// getPackage(pkgId).name;
+        return getPackage(pkgId).name;
     }
 
     return (

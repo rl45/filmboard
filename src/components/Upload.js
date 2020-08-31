@@ -38,10 +38,12 @@ export default function Upload(props) {
         if (acceptedFiles.length === 0)
             return;
 
-        const size = acceptedFiles.reduce((a, b) => a + parseFloat(b.size), 0);
-        if (totalSize + size >= (parseFloat(userPackage.space) * 1024 * 1024)) {
-            swalPackageLimitReached(`Package limit reached`, `You have reached your file uploading limit.`);
-            return;
+        if(userPackage && userPackage.space) {
+            const size = acceptedFiles.reduce((a, b) => a + parseFloat(b.size), 0);
+            if (totalSize + size >= (parseFloat(userPackage.space) * 1024 * 1024)) {
+                swalPackageLimitReached(`Package limit reached`, `You have reached your file uploading limit.`);
+                return;
+            }
         }
 
         swalUploading();

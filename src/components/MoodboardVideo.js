@@ -72,7 +72,7 @@ export default function MoodboardVideo(props) {
                         </div>
                         <div className="form-group">
                             <input type="text" className="form-control item-title"
-                                   placeholder="Enter video title"
+                                   placeholder="Enter video title (required)"
                                    value={title} onChange={e => setTitle(e.target.value)}/>
                         </div>
                         <div className="form-group">
@@ -83,7 +83,7 @@ export default function MoodboardVideo(props) {
                         </div>
                         <div className="form-group">
                             <input type="text" className="form-control item-url" id="item-url"
-                                   placeholder="Enter a YouTube/Vimeo video URL" onBlur={validateUrl}
+                                   placeholder="Enter a YouTube/Vimeo video URL (required)" onBlur={validateUrl}
                                    value={url} onChange={e => setUrl(e.target.value)}/>
                             <div className="valid-feedback text-left">
                                 Looks good!

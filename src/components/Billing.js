@@ -61,29 +61,30 @@ export default function Billing(props) {
     }
 
     const handleChoosePackage = id => {
-        id = parseInt(id);
-        const activePackageId = parseInt(activePackage.id);
-        if (id === activePackageId) {
-            swalInfo(`You are already ${activePackage.name} user.`);
-        } else if (id < activePackageId) {
-            swalPkgChange(
-                `Downgrading!`,
-                `Your current package status will be overwritten and new limits will be applied!`,
-                `info`,
-                async () => {
-                    if (id === 1) {
-                        await updatePackage(id);
-                        return;
-                    }
+        if(activePackage) {
+            const activePackageId = parseInt(activePackage.id);
+            if (id === activePackageId) {
+                swalInfo(`You are already ${activePackage.name} user.`);
+            } else if (id < activePackageId) {
+                swalPkgChange(
+                    `Downgrading!`,
+                    `Your current package status will be overwritten and new limits will be applied!`,
+                    `info`,
+                    async () => {
+                        if (id === 1) {
+                            await updatePackage(id);
+                            return;
+                        }
 
-                    setChoosenPackage(getPackage(id))
-                });
-        } else if (id > activePackageId) {
-            swalPkgChange(
-                `Upgrading!`,
-                `You can change your plan anytime you want!`,
-                `info`,
-                () => setChoosenPackage(getPackage(id)));
+                        setChoosenPackage(getPackage(id))
+                    });
+            } else if (id > activePackageId) {
+                swalPkgChange(
+                    `Upgrading!`,
+                    `You can change your plan anytime you want!`,
+                    `info`,
+                    () => setChoosenPackage(getPackage(id)));
+            }
         }
     }
 
@@ -305,6 +306,7 @@ export default function Billing(props) {
                             shippingAddress={false}
                             billingAddress={false}
                             name={config.appTitle}
+                            email={session.get('user').email}
                             amount={choosenPackage.price * 100}
                             currency="USD"
                             opened={() => Swal.close()}

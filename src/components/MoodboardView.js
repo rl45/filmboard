@@ -56,7 +56,9 @@ export default function MoodboardView(props) {
 
                 if (result.data.length === 1) {
                     setProject(result.data[0]);
-                    document.querySelector(`.video-thumbnail`).click();
+                    if (document.querySelector(`.video-thumbnail`) !== null) {
+                        document.querySelector(`.video-thumbnail`).click();
+                    }
                 }
             });
     }
@@ -98,17 +100,23 @@ export default function MoodboardView(props) {
 
     const renderThumbnails = () => {
         if (props.moodboards) {
-            return props.moodboards.map(item => {
-                if (item.type === 'video') {
-                    return item.fileUrl.includes('vimeo') ?
-                        <ThumbnailVimeo key={item._id} item={item} setPlaying={setPlaying}/>
-                        : <ThumbnailYouTube key={item._id} item={item} setPlaying={setPlaying}/>;
-                } else if (item.type === 'audio') {
-                    return <ThumbnailAudio key={item._id} item={item} setPlaying={setPlaying}/>
-                } else if (item.type === 'image') {
-                    return <ThumbnailImage key={item._id} item={item} setPlaying={setPlaying}/>
-                }
-            });
+            if (props.moodboards.length > 0) {
+                return props.moodboards.map(item => {
+                    if (item.type === 'video') {
+                        return item.fileUrl.includes('vimeo') ?
+                            <ThumbnailVimeo key={item._id} item={item} setPlaying={setPlaying}/>
+                            : <ThumbnailYouTube key={item._id} item={item} setPlaying={setPlaying}/>;
+                    } else if (item.type === 'audio') {
+                        return <ThumbnailAudio key={item._id} item={item} setPlaying={setPlaying}/>
+                    } else if (item.type === 'image') {
+                        return <ThumbnailImage key={item._id} item={item} setPlaying={setPlaying}/>
+                    }
+                });
+            } else {
+                return <div className="not-found">No moodboards found.</div>;
+            }
+        } else {
+            return <div className="not-found">No moodboards found.</div>;
         }
     }
 
@@ -137,7 +145,9 @@ export default function MoodboardView(props) {
                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                allowFullScreen></iframe>
             } else if (type === 'audio') {
-                return <div style={{margin: '20px'}}><audio controls="controls" className="audio-player" src={playingUrl}></audio></div>
+                return <div style={{margin: '20px'}}>
+                    <audio controls="controls" className="audio-player" src={playingUrl}></audio>
+                </div>
             } else if (type === 'image') {
                 return <img className="player" src={playingUrl}/>
             }
@@ -307,29 +317,35 @@ export default function MoodboardView(props) {
                 <div className="col-2 col-sm-2 col-md-2 text-center">
                     {renderThumbnails()}
                 </div>
-                <div className="col-7 col-sm-7 col-md-7 text-left">
-                    {renderDisplaying()}
-                    <p className="h4 m-2 text-left">{playingItem && playingItem.title || ``}</p>
-                    <p className="m-2 text-right">
-                        <span className="badge badge-pill badge-light badge-like m-1" onClick={handleLike}
-                              title="Like this Moodboard">
-                        <i className="fa fa-thumbs-up fa-bigger"></i> {playingVideoData && playingVideoData.likes || 0}</span>
-                        <span className="badge badge-pill badge-light badge-like m-1" onClick={handleDislike}
-                              title="Dislike this Moodboard">
-                        <i className="fa fa-thumbs-down fa-bigger"></i> {playingVideoData && playingVideoData.dislikes || 0}</span>
-                        <span className="badge badge-pill badge-light badge-like m-1"
-                              title="Comments count this Moodboard">
-                        <i className="fa fa-comment fa-bigger"></i> {comments && comments.length || 0}</span>
-                    </p>
-                    <p>{playingItem && playingItem.description || ``}</p>
-                </div>
+                {
+                    playingItem &&
+                    <div className="col-7 col-sm-7 col-md-7 text-left">
+                        {renderDisplaying()}
+                        <p className="h4 m-2 text-left">{playingItem && playingItem.title || ``}</p>
+                        <p className="m-2 text-right">
+                            <span className="badge badge-pill badge-light badge-like m-1" onClick={handleLike}
+                                  title="Like this Moodboard">
+                            <i className="fa fa-thumbs-up fa-bigger"></i> {playingVideoData && playingVideoData.likes || 0}</span>
+                            <span className="badge badge-pill badge-light badge-like m-1" onClick={handleDislike}
+                                  title="Dislike this Moodboard">
+                            <i className="fa fa-thumbs-down fa-bigger"></i> {playingVideoData && playingVideoData.dislikes || 0}</span>
+                            <span className="badge badge-pill badge-light badge-like m-1"
+                                  title="Comments count this Moodboard">
+                            <i className="fa fa-comment fa-bigger"></i> {comments && comments.length || 0}</span>
+                        </p>
+                        <p>{playingItem && playingItem.description || ``}</p>
+                    </div>
+                }
                 <div className="col-3 col-sm-3 col-md-3 text-left comments-column">
-                    <Comment
-                        reloadComments={reloadComments}
-                        playingItemId={playingItem && playingItem._id || null}
-                        setLoginOrSignup={() => setLoginOrSignup(true)}
-                        comment={commentToUpdate}
-                        type="moodboard" />
+                    {
+                        playingItem &&
+                        <Comment
+                            reloadComments={reloadComments}
+                            playingItemId={playingItem && playingItem._id || null}
+                            setLoginOrSignup={() => setLoginOrSignup(true)}
+                            comment={commentToUpdate}
+                            type="moodboard"/>
+                    }
                     {playingItem && renderComments()}
                 </div>
             </div>

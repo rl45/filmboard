@@ -28,8 +28,19 @@ export default function StoryboardView(props) {
         })();
     }, []);
 
-    const renderStoryCells = () =>
-        props.storyboards && props.storyboards.map(x => <StoryboardViewCell key={x._id} story={x}/>);
+    const renderStoryCells = () => {
+        if(props.storyboards) {
+            if(props.storyboards.length > 0) {
+                return props.storyboards.map(x => <StoryboardViewCell key={x._id} story={x}/>);
+            }
+            else {
+                return <div className="not-found">No storyboards found.</div>;
+            }
+        }
+        else {
+            return <div className="not-found">No storyboards found.</div>;
+        }
+    }
 
     const reloadComments = async () => {
         const projectId = window.location.href.split('/').pop();

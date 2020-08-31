@@ -37,7 +37,10 @@ export default function Storyboard(props) {
     return (
         <div className="container storyboard">
             <div className="row mt-10 mb-10">
-                <div className="col-12 col-sm-12 text-right">
+                <div className="col-6 col-sm-6 text-left">
+                    <small style={{color: 'grey'}}>* Only the items with valid title and file will be saved. Others will be skipped.</small>
+                </div>
+                <div className="col-6 col-sm-6 text-right">
                     <button className="btn btn-sm btn-outline-light m-1"
                             onClick={() => handleAddMore()}>Add Cell
                     </button>

@@ -53,9 +53,11 @@ export default function Moodboard(props) {
     const handleAddMore = type => {
 
         const t = Array.from(items);
-        if(t.length >= userPackage.moodboardItems) {
-            swalPackageLimitReached(`Package limit reached`, `You have reached your Moodboard items limit.`);
-            return;
+        if(userPackage && userPackage.moodboardItems) {
+            if (t.length >= userPackage.moodboardItems) {
+                swalPackageLimitReached(`Package limit reached`, `You have reached your Moodboard items limit.`);
+                return;
+            }
         }
 
         t.push({fileUrl: '', title: '', description: '', type: type});
@@ -134,7 +136,10 @@ export default function Moodboard(props) {
         <div className="container moodboard">
             {redirectTo && <Redirect push to={redirectTo}/>}
             <div className="row mt-10 mb-10">
-                <div className="col-12 col-sm-12 text-right">
+                <div className="col-6 col-sm-6 text-left">
+                    <small style={{color: 'grey'}}>* Only the items with valid title, URL and file will be saved. Others will be skipped.</small>
+                </div>
+                <div className="col-6 col-sm-6 text-right">
                     <button className="btn btn-sm btn-outline-light m-1"
                             onClick={() => handleAddMore('video')}>Add Video
                     </button>

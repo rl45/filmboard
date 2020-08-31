@@ -7,7 +7,8 @@ import {
     swalDeleteForm,
     swalError,
     swalSuccess,
-    swalShare
+    swalShare,
+    swalInfo
 } from "../utils/swal";
 import LoginOrSignup from "./LoginOrSignup";
 import MoodboardView from './MoodboardView';
@@ -33,19 +34,29 @@ export default function ProjectPage(props) {
 
     const reloadProject = async () => {
         let id = window.location.href.split('/').pop();
-        setProjectId(id);
-        await projectService.get(id)
-            .then(result => {
-                if (result.error) {
-                    swalError(result.error);
-                    return;
-                }
+        if (id && id.length === 24) {
+            setProjectId(id);
+            await projectService.get(id)
+                .then(result => {
+                    if (result.error) {
+                        swalError(result.error);
+                        return;
+                    }
 
-                if (result.data.length === 1) {
-                    loadProject(result.data[0]);
-                    document.querySelector(`.video-thumbnail`).click();
-                }
-            });
+                    if (result.data.length === 1) {
+                        loadProject(result.data[0]);
+                        if (document.querySelector(`.video-thumbnail`) !== null) {
+                            document.querySelector(`.video-thumbnail`).click();
+                        }
+                    } else {
+                        swalInfo(`Project not found with project ID.`);
+                        return;
+                    }
+                });
+        } else {
+            swalError(`Invalid project ID detected in the URL.`);
+            return;
+        }
     }
 
     const loadProject = project => {
