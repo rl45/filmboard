@@ -59,5 +59,6 @@
         "priceId": "price_1HLjdHBSe2uLokOsz0TSiyiw",
         "type": "annually"
     }],
-    "stripePublishableKey": "pk_test_6GRQZUsigC9HQbudaLWbbMzg00OEFB8bnj"
+    "stripePublishableKey-test": "pk_test_6GRQZUsigC9HQbudaLWbbMzg00OEFB8bnj",
+    "stripePublishableKey": "pk_live_bsUlfWMJYcxLCze4JpFcL9wZ00Ikiy1WVQ"
 }

@@ -333,7 +333,7 @@ export default function MoodboardView(props) {
                                   title="Comments count this Moodboard">
                             <i className="fa fa-comment fa-bigger"></i> {comments && comments.length || 0}</span>
                         </p>
-                        <p>{playingItem && playingItem.description || ``}</p>
+                        <p className="m-2">{playingItem && playingItem.description || ``}</p>
                     </div>
                 }
                 <div className="col-3 col-sm-3 col-md-3 text-left comments-column">

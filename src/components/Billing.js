@@ -64,7 +64,7 @@ export default function Billing(props) {
         if(activePackage) {
             const activePackageId = parseInt(activePackage.id);
             if (id === activePackageId) {
-                swalInfo(`You are already ${activePackage.name} user.`);
+                swalInfo(`You are already on the ${activePackage.name} plan.`);
             } else if (id < activePackageId) {
                 swalPkgChange(
                     `Downgrading!`,
