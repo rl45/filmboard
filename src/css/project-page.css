@@ -12,17 +12,23 @@
 .description {
 }
 .dropzone-section {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .dropzone-p {
-    height: 200px;
+    height: 120px;
     width: 100%;
     border: 1px dashed #676767;
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
-    line-height: 200px;
+    line-height: 120px;
 }
 .uploaded-file {
     margin: 7px;
     text-align: left;
+}
+.btn-delete-file {
+    color: red !important;
+    cursor: pointer;
 }

@@ -46,4 +46,24 @@ export default class {
 
         return result;
     }
+
+    static delete = async id => {
+
+        let result = {
+            data: null,
+            error: null
+        };
+
+        await axios.delete(`${config.api}/uploads/${id}`)
+            .then(resp => {
+                if (resp.status === 200) {
+                    result.data = resp.data;
+                }
+            })
+            .catch(err => {
+                result.error = err.response.data;
+            });
+
+        return result;
+    }
 }

@@ -16,6 +16,7 @@ import StoryboardView from './StoryboardView';
 import Upload from "./Upload";
 import UploadView from './UploadView';
 import '../css/project-page.css';
+import UploadAndViewVendorFiles from "./UploadAndViewVendorFiles";
 
 export default function ProjectPage(props) {
 
@@ -158,10 +159,11 @@ export default function ProjectPage(props) {
                             <StoryboardView storyboards={storyboards || null} />
                         </div>
                         <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            {
-                                session.get('user') && session.get('user')._id === project.userId._id ?
-                                    <UploadView /> : <Upload />
-                            }
+                            {/*{*/}
+                            {/*    session.get('user') && session.get('user')._id === project.userId._id ?*/}
+                            {/*        <UploadView /> : <Upload />*/}
+                            {/*}*/}
+                            <UploadAndViewVendorFiles showDeleteButton={session.get('user') && session.get('user')._id === project.userId._id} />
                         </div>
                     </div>
                 </div>

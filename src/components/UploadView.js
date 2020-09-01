@@ -10,6 +10,10 @@ export default function Upload(props) {
     const [totalSize, setTotalSize] = useState(0);
 
     useEffect(() => {
+        reload();
+    }, []);
+
+    const reload = () => {
         const projectId = window.location.href.split('/').pop();
         if(projectId && projectId.length === 24) {
             vendorUploadsService.getByProjectId(projectId)
@@ -24,19 +28,37 @@ export default function Upload(props) {
                     setTotalSize(size);
                 });
         }
-    }, []);
+    }
+
+    const deleteFile = async id => {
+        console.log('delete: ', id);
+        await vendorUploadsService.delete(id)
+            .then(result => {
+                if (result.error) {
+                    swalError(result.error);
+                    return;
+                }
+
+                reload();
+            });
+    }
 
     const renderFiles = () =>
         files.length > 0 ?
-            files.map(file => <UploadedFile key={file._id} file={file} />)
+            files.map(file => <UploadedFile key={file._id} file={file} deleteFile={deleteFile} />)
             : <div className="not-found">No files uploaded.</div>
 
     return (
-        <div className="container text-center">
+        <div className="container">
+            <div className="row">
+                <div className="col-12 col-sm-12 col-md-12 text-left">
+                    <span className="h6 m-2">Files uploaded by the Vendors</span>
+                    <span className="comment-bar">|</span>
+                    <span>Total size: {bytesToSize(totalSize)}</span>
+                </div>
+            </div>
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12">
-                    <h5 className="m-4">Files uploaded by the Vendors</h5>
-                    <h6 className="m-2 text-left">Total size: {bytesToSize(totalSize)}</h6>
                     {renderFiles()}
                 </div>
             </div>
