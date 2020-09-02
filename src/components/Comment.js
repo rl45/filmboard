@@ -114,10 +114,8 @@ export default function Comment(props) {
                         </div>
                     </div> || <div className="col-sm-4"></div>
                 }
-                <div className="col-sm-2 text-center">
-                    <button className="btn btn-outline-light btn-sm mt-1" onClick={handleComment}>Save</button>
-                </div>
-                <div className="col-sm-2 text-center">
+                <div className="col-sm-4 text-right">
+                    <button className="btn btn-outline-light btn-sm mt-1 mr-1" onClick={handleComment}>Save</button>
                     <button className="btn btn-outline-light btn-sm mt-1" onClick={() => reset()}>Clear</button>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import UploadView from "./UploadView";
 import Dropzone from "react-dropzone";
 import userService from "../services/user";
 import vendorUploadsService from "../services/vendor-uploads";
-import {swalError, swalPackageLimitReached, swalSuccess, swalUploading} from "../utils/swal";
+import {swalError, swalPackageLimitReached, swalSuccess, swalUploading, swalPackageLimitReachedInformOwner} from "../utils/swal";
 import Swal from "sweetalert2";
 import moment from "moment";
 import UploadedFile from "./UploadedFile";
@@ -48,8 +48,14 @@ export default function UploadAndViewVendorFiles(props) {
         if(userPackage && userPackage.space) {
             const size = acceptedFiles.reduce((a, b) => a + parseFloat(b.size), 0);
             if (totalSize + size >= (parseFloat(userPackage.space) * 1024 * 1024)) {
-                swalPackageLimitReached(`Package limit reached`, `You have reached your file uploading limit.`);
-                return;
+                if(props.showDeleteButton === true) {
+                    swalPackageLimitReached(`Package limit reached`, `You have reached your file uploading limit.`);
+                    return;
+                }
+                else {
+                    swalPackageLimitReachedInformOwner(`Project owner's package limit reached`, `This project's owner's package limit is reached. You cannot upload more files. You should inform the project owner.`);
+                    return;
+                }
             }
         }
 

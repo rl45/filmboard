@@ -258,6 +258,18 @@ export const swalUploading = () => {
     });
 }
 
+export const swalPackageLimitReachedInformOwner = (title, text) => {
+    Swal.fire({
+        icon: 'info',
+        title: title,
+        text: `${text}`,
+        showConfirmButton: true,
+        showCancelButton: false,
+        allowEscapeKey: false,
+        allowOutsideClick: false,
+    });
+}
+
 export const swalPackageLimitReached = (title, text) => {
     Swal.fire({
         icon: 'info',

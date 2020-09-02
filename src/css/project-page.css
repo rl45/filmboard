@@ -29,6 +29,6 @@
     text-align: left;
 }
 .btn-delete-file {
-    color: red !important;
+    color: #ff4040 !important;
     cursor: pointer;
 }

@@ -8,8 +8,15 @@ import storyboardService from "../services/storyboard";
 
 export default function StoryboardCell(props) {
 
-    const [title, setTitle] = useState(props.item.title);
-    const [description, setDescription] = useState(props.item.description);
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+
+    useEffect(() => {
+        if(props.item) {
+            setTitle(props.item.title);
+            setDescription(props.item.description);
+        }
+    }, []);
 
     const removeCell = e => {
         e.preventDefault();
@@ -43,7 +50,7 @@ export default function StoryboardCell(props) {
                         </div>
                         <div className="form-group">
                             <input type="text" className="form-control item-title"
-                                   placeholder="Enter image title"
+                                   placeholder="Enter image title (required)"
                                    value={title} onChange={e => setTitle(e.target.value)}/>
                         </div>
                         <div className="form-group">

@@ -169,7 +169,7 @@ export default class {
         };
 
         const data = {
-            email: email,
+            email: email.toLowerCase(),
             password: password
         };
 
@@ -193,7 +193,7 @@ export default class {
         };
 
         const data = {
-            email: email
+            email: email.toLowerCase()
         };
 
         await axios.post(`${config.api}/users/forgotpassword`, data)
@@ -264,7 +264,7 @@ export default class {
 
         const data = {
             fullname: fullname,
-            email: email,
+            email: email.toLowerCase(),
             password: password,
             position: position
         };

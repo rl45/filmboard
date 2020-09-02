@@ -1,0 +1,13 @@
+
+
+.rodal-mask {
+    background: #343232 !important;
+    opacity: 0.9;
+}
+.rodal-dialog {
+    box-shadow: 0 0 8px #7c7c7c !important;
+}
+
+li a {
+    cursor: pointer;
+}

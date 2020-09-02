@@ -13,6 +13,7 @@ import '../css/storyboard-view.css';
 import Comment from "./Comment";
 import CommentBox from "./CommentBox";
 import commentService from "../services/comment";
+import LoginOrSignup from "./LoginOrSignup";
 
 export default function StoryboardView(props) {
 
@@ -216,8 +217,9 @@ export default function StoryboardView(props) {
 
     return (
         <div className="container-fluid">
+            {loginOrSignup && <LoginOrSignup onClose={() => setLoginOrSignup(false)} />}
             <div className="row mt-10">
-                <div className="col-9 col-sm-9 text-left">
+                <div className="col-9 col-sm-9">
                     {renderStoryCells()}
                 </div>
                 <div className="col-3 col-sm-3 col-md-3 text-left comments-column">

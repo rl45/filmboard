@@ -19,6 +19,7 @@ import ThumbnailAudio from './ThumbnailAudio';
 import ThumbnailImage from './ThumbnailImage';
 import commentService from "../services/comment";
 import CommentBox from "./CommentBox";
+import LoginOrSignup from "./LoginOrSignup";
 
 export default function MoodboardView(props) {
     const [redirectTo, setRedirectTo] = useState(null);
@@ -313,6 +314,7 @@ export default function MoodboardView(props) {
 
     return (
         <div className="container-fluid text-center mt-10">
+            {loginOrSignup && <LoginOrSignup onClose={() => setLoginOrSignup(false)} />}
             <div className="row">
                 <div className="col-2 col-sm-2 col-md-2 text-center">
                     {renderThumbnails()}

@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
     <title>Filmboard.io</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-  </head>
-  <body>
-    <div id="root" style="min-height: 50vh;"></div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('li.active').removeClass('active');
-        $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
-
+</head>
+<body>
+<div id="root" style="min-height: 50vh;"></div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
         $("#txtSignupFullname").keypress(function (e) {
-          const k = e.keyCode;
-          const t = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
-          if (!t)
-            return false;
+            const k = e.keyCode;
+            const t = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+            if (!t)
+                return false;
         });
 
         $("#txtSignupUsername").keypress(function (e) {
-          const k = e.keyCode;
-          const t = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || (k >= 48 && k <= 57));
-          if (!t)
-            return false;
+            const k = e.keyCode;
+            const t = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || (k >= 48 && k <= 57));
+            if (!t)
+                return false;
         });
-      });
-    </script>
-  </body>
+    });
+</script>
+</body>
 </html>

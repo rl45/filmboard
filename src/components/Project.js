@@ -77,7 +77,7 @@ export default function Project(props) {
             if (type === 'video') {
                 let title = x.querySelector(`.item-title`).value || '';
                 let url = x.querySelector(`.item-url`).value || '';
-                if(title && title.length > 0 && url && url.length > 0) {
+                if (title && title.length > 0 && url && url.length > 0) {
                     moodboard.push({
                         id: x.querySelector(`.item-id`).value || '',
                         type: type,
@@ -91,7 +91,7 @@ export default function Project(props) {
             if (type === 'audio' || type === 'image') {
                 let title = x.querySelector(`.item-title`).value || '';
                 let file = x.querySelector(`.item-file`).files[0] || null;
-                if(title && title.length > 0 && file) {
+                if (title && title.length > 0 && file) {
                     moodboard.push({
                         id: x.querySelector(`.item-id`).value || '',
                         type: type,
@@ -107,7 +107,7 @@ export default function Project(props) {
         document.querySelectorAll(`.storyboard .item`).forEach(x => {
             let title = x.querySelector(`.item-title`).value || '';
             let file = x.querySelector(`.item-file`).files[0] || null;
-            if(title && title.length > 0 && file) {
+            if (title && title.length > 0 && file) {
                 storyboard.push({
                     id: x.querySelector(`.item-id`).value || '',
                     file: file,
@@ -398,10 +398,10 @@ export default function Project(props) {
                             <Storyboard storyboards={storyboards || null}/>
                         </div>
                         <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            {/*<UploadView />*/}
                             {
                                 project &&
-                                <UploadAndViewVendorFiles showDeleteButton={session.get('user') && session.get('user')._id === project.userId._id} />
+                                <UploadAndViewVendorFiles
+                                    showDeleteButton={session.get('user') && session.get('user')._id === project.userId._id}/>
                             }
                         </div>
                     </div>

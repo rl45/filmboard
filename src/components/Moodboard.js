@@ -52,23 +52,27 @@ export default function Moodboard(props) {
 
     const handleAddMore = type => {
 
-        const t = Array.from(items);
+        const count = document.querySelectorAll(`.moodboard .item`).length;
         if(userPackage && userPackage.moodboardItems) {
-            if (t.length >= userPackage.moodboardItems) {
+            if (count >= userPackage.moodboardItems) {
                 swalPackageLimitReached(`Package limit reached`, `You have reached your Moodboard items limit.`);
                 return;
             }
         }
 
+        const t = Array.from(items);
         t.push({fileUrl: '', title: '', description: '', type: type});
         setItems(t);
     }
 
     const handleAddVendorFile = async () => {
 
-        if(items.length >= userPackage.moodboardItems) {
-            swalPackageLimitReached(`Package limit reached`, `You have reached your Moodboard items limit.`);
-            return;
+        const count = document.querySelectorAll(`.moodboard .item`).length;
+        if(userPackage && userPackage.moodboardItems) {
+            if (count >= userPackage.moodboardItems) {
+                swalPackageLimitReached(`Package limit reached`, `You have reached your Moodboard items limit.`);
+                return;
+            }
         }
 
         const projectId = window.location.href.split('/').pop();

@@ -31,7 +31,6 @@ export default function Upload(props) {
     }
 
     const deleteFile = async id => {
-        console.log('delete: ', id);
         await vendorUploadsService.delete(id)
             .then(result => {
                 if (result.error) {

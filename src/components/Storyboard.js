@@ -32,7 +32,7 @@ export default function Storyboard(props) {
     }
 
     const renderItems = () =>
-        items.map((item, idx) => <StoryboardCell key={idx} item={item}/>);
+        items.map(item => <StoryboardCell key={item._id} item={item}/>);
 
     return (
         <div className="container storyboard">
