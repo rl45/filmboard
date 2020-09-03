@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import userService from '../services/user';
 import session from '../services/session';
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import config from "../config.json";
-import {getPackage} from "../utils/utils";
-import {swalInfo, swalLoading, swalPkgChange} from '../utils/swal';
+import { getPackage } from "../utils/utils";
+import { swalInfo, swalLoading, swalPkgChange } from '../utils/swal';
 import '../css/billing.css';
 import StripeCheckout from 'react-stripe-checkout';
 import moment from 'moment';
@@ -61,7 +61,7 @@ export default function Billing(props) {
     }
 
     const handleChoosePackage = id => {
-        if(activePackage) {
+        if (activePackage) {
             const activePackageId = parseInt(activePackage.id);
             if (id === activePackageId) {
                 swalInfo(`You are already on the ${activePackage.name} plan.`);
@@ -128,12 +128,12 @@ export default function Billing(props) {
 
     return activePackage && (
         <div className="container text-center billing">
-            {redirectTo && <Redirect push to={redirectTo}/>}
+            {redirectTo && <Redirect push to={redirectTo} />}
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12">
                     <h2 className="m-4">
                         <i className="fa fa-chevron-left btn-back" onClick={() => setRedirectTo(`/`)}
-                           title="Back to dashboard"></i>
+                            title="Back to dashboard"></i>
                         Billing
                     </h2>
                 </div>
@@ -200,11 +200,13 @@ export default function Billing(props) {
                             <span className="billing-info">Free forever.</span>
                             <ul>
                                 <li>7 Projects</li>
+                                <hr />
                                 <li>5 Videos per project</li>
+                                <hr />
                                 <li>50mb Space for vendor uploads</li>
                             </ul>
                             <button className="btn btn-outline-primary btn-pkg-choose"
-                                    onClick={e => handleChoosePackage(1)}>Free Plan
+                                onClick={e => handleChoosePackage(1)}>Free Plan
                             </button>
                         </div>
                     </div>
@@ -215,15 +217,15 @@ export default function Billing(props) {
                             <span className="billing-info">Per month, billed monthly.</span>
                             <ul>
                                 <li>15 Projects</li>
-                                <hr/>
+                                <hr />
                                 <li>20 Videos per project</li>
-                                <hr/>
+                                <hr />
                                 <li>200mb Space for vendor uploads</li>
-                                <hr/>
+                                <hr />
                                 <li>Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-primary btn-pkg-choose"
-                                    onClick={e => handleChoosePackage(2)}>Choose <strong>Plus Monthly</strong>
+                                onClick={e => handleChoosePackage(2)}>Choose <strong>Plus Monthly</strong>
                             </button>
                         </div>
                     </div>
@@ -234,12 +236,15 @@ export default function Billing(props) {
                             <span className="billing-info">Per month, billed monthly.</span>
                             <ul>
                                 <li>Unlimited Projects</li>
+                                <hr />
                                 <li>Unlimited Videos per project</li>
+                                <hr />
                                 <li>2gb Space for vendor uploads</li>
+                                <hr />
                                 <li>Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-primary btn-pkg-choose"
-                                    onClick={e => handleChoosePackage(3)}>Choose <strong>Premium Monthly</strong>
+                                onClick={e => handleChoosePackage(3)}>Choose <strong>Premium Monthly</strong>
                             </button>
                         </div>
                     </div>
@@ -255,11 +260,13 @@ export default function Billing(props) {
                             <span className="billing-info">Free forever.</span>
                             <ul>
                                 <li>7 Projects</li>
+                                <hr />
                                 <li>5 Videos per project</li>
+                                <hr />
                                 <li>50mb Space for vendor uploads</li>
                             </ul>
                             <button className="btn btn-outline-primary btn-pkg-choose"
-                                    onClick={e => handleChoosePackage(1)}>That's fine
+                                onClick={e => handleChoosePackage(1)}>That's fine
                             </button>
                         </div>
                     </div>
@@ -270,12 +277,15 @@ export default function Billing(props) {
                             <span className="billing-info">Per year, billed annually.</span>
                             <ul>
                                 <li>15 Projects</li>
+                                <hr />
                                 <li>20 Videos per project</li>
+                                <hr />
                                 <li>200mb Space for vendor uploads</li>
+                                <hr />
                                 <li>Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-primary btn-pkg-choose"
-                                    onClick={e => handleChoosePackage(4)}>Choose <strong>Plus Annually</strong>
+                                onClick={e => handleChoosePackage(4)}>Choose <strong>Plus Annually</strong>
                             </button>
                         </div>
                     </div>
@@ -285,13 +295,18 @@ export default function Billing(props) {
                             <p className="pkg-price">$119</p>
                             <span className="billing-info">Per year, billed annually.</span>
                             <ul>
-                                <li>Unlimited Projects</li>
+                                <li><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z" />
+                                </svg>Unlimited Projects</li>
+                                <hr />
                                 <li>20 Videos per project</li>
+                                <hr />
                                 <li>2gb Space for vendor uploads</li>
+                                <hr />
                                 <li>Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-primary btn-pkg-choose"
-                                    onClick={e => handleChoosePackage(5)}>Choose <strong>Premium Annually</strong>
+                                onClick={e => handleChoosePackage(5)}>Choose <strong>Premium Annually</strong>
                             </button>
                         </div>
                     </div>
@@ -315,7 +330,7 @@ export default function Billing(props) {
                             opened={() => Swal.close()}
                             closed={() => setChoosenPackage(null)}>
                             <button className="btn btn-lg btn-pink" onClick={() => swalLoading()}>
-                                <i className="fab fa-cc-stripe" style={{marginRight: '5px'}}></i>Pay ${choosenPackage.price} with Stripe
+                                <i className="fab fa-cc-stripe" style={{ marginRight: '5px' }}></i>Pay ${choosenPackage.price} with Stripe
                             </button>
                         </StripeCheckout>
                     }
