@@ -203,7 +203,7 @@ export default function Billing(props) {
                                 <li>5 Videos per project</li>
                                 <li>50mb Space for vendor uploads</li>
                             </ul>
-                            <button className="btn btn-outline-light btn-pkg-choose"
+                            <button className="btn btn-outline-primary btn-pkg-choose"
                                     onClick={e => handleChoosePackage(1)}>Free Plan
                             </button>
                         </div>
@@ -215,11 +215,14 @@ export default function Billing(props) {
                             <span className="billing-info">Per month, billed monthly.</span>
                             <ul>
                                 <li>15 Projects</li>
+                                <hr/>
                                 <li>20 Videos per project</li>
+                                <hr/>
                                 <li>200mb Space for vendor uploads</li>
+                                <hr/>
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-light btn-pkg-choose"
+                            <button className="btn btn-outline-primary btn-pkg-choose"
                                     onClick={e => handleChoosePackage(2)}>Choose <strong>Plus Monthly</strong>
                             </button>
                         </div>
@@ -235,7 +238,7 @@ export default function Billing(props) {
                                 <li>2gb Space for vendor uploads</li>
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-light btn-pkg-choose"
+                            <button className="btn btn-outline-primary btn-pkg-choose"
                                     onClick={e => handleChoosePackage(3)}>Choose <strong>Premium Monthly</strong>
                             </button>
                         </div>
@@ -255,7 +258,7 @@ export default function Billing(props) {
                                 <li>5 Videos per project</li>
                                 <li>50mb Space for vendor uploads</li>
                             </ul>
-                            <button className="btn btn-outline-light btn-pkg-choose"
+                            <button className="btn btn-outline-primary btn-pkg-choose"
                                     onClick={e => handleChoosePackage(1)}>That's fine
                             </button>
                         </div>
@@ -271,7 +274,7 @@ export default function Billing(props) {
                                 <li>200mb Space for vendor uploads</li>
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-light btn-pkg-choose"
+                            <button className="btn btn-outline-primary btn-pkg-choose"
                                     onClick={e => handleChoosePackage(4)}>Choose <strong>Plus Annually</strong>
                             </button>
                         </div>
@@ -287,7 +290,7 @@ export default function Billing(props) {
                                 <li>2gb Space for vendor uploads</li>
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-light btn-pkg-choose"
+                            <button className="btn btn-outline-primary btn-pkg-choose"
                                     onClick={e => handleChoosePackage(5)}>Choose <strong>Premium Annually</strong>
                             </button>
                         </div>
