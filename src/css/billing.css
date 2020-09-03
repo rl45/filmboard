@@ -9,14 +9,14 @@
     width: 100%;
     /*border: 1px solid #fff;*/
     border-radius: 15px;
-    padding: 30px;
-    width: 300px;
+    padding: 20px;
+    width: 400px;
     height: 45vh;
     background-color: #1c1e26!important;
 }
-.pkg:hover {
+/*.pkg:hover {
     box-shadow: 0 0 5px #d7d7d7;
-}
+}*/
 .pkg-active {
     color: rgb(56,78,210);
 }
