@@ -80,8 +80,8 @@ export default function Billing(props) {
                     });
             } else if (id > activePackageId) {
                 swalPkgChange(
-                    `Upgrading!`,
-                    `You can change your plan anytime you want!`,
+                    `Upgrade`,
+                    `Upgrade your plan`,
                     `info`,
                     () => setChoosenPackage(getPackage(id)));
             }
@@ -263,7 +263,7 @@ export default function Billing(props) {
                     <div className="col-4 col-sm-4 col-md-4">
                         <div className="pkg">
                             <span className="pkg-name">Plus</span>
-                            <p className="pkg-price">$108</p>
+                            <p className="pkg-price">$99</p>
                             <span className="billing-info">Per year, billed annually.</span>
                             <ul>
                                 <li>15 Projects</li>
@@ -279,7 +279,7 @@ export default function Billing(props) {
                     <div className="col-4 col-sm-4 col-md-4">
                         <div className="pkg">
                             <span className="pkg-name">Premium</span>
-                            <p className="pkg-price">$150</p>
+                            <p className="pkg-price">$119</p>
                             <span className="billing-info">Per year, billed annually.</span>
                             <ul>
                                 <li>Unlimited Projects</li>
