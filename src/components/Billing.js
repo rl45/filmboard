@@ -204,7 +204,7 @@ export default function Billing(props) {
                                 <li>50mb Space for vendor uploads</li>
                             </ul>
                             <button className="btn btn-outline-light btn-pkg-choose"
-                                    onClick={e => handleChoosePackage(1)}>That's fine
+                                    onClick={e => handleChoosePackage(1)}>Free Plan
                             </button>
                         </div>
                     </div>
@@ -231,7 +231,7 @@ export default function Billing(props) {
                             <span className="billing-info">Per month, billed monthly.</span>
                             <ul>
                                 <li>Unlimited Projects</li>
-                                <li>20 Videos per project</li>
+                                <li>Unlimited Videos per project</li>
                                 <li>2gb Space for vendor uploads</li>
                                 <li>Money back guarantee</li>
                             </ul>

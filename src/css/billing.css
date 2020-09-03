@@ -7,12 +7,12 @@
 }
 .pkg {
     width: 100%;
-    border: 1px solid #fff;
+    /*border: 1px solid #fff;*/
     border-radius: 15px;
     padding: 30px;
     width: 300px;
     height: 45vh;
-    /*background-color: #343a40!important;*/
+    background-color: #1c1e26!important;
 }
 .pkg:hover {
     box-shadow: 0 0 5px #d7d7d7;
@@ -22,11 +22,11 @@
 }
 .pkg-name {
     font-size: 24px;
-    color: rgb(56,78,210);
+    color: rgb(255, 255, 255);
 }
 .pkg-price {
     font-size: 24px;
-    color: rgb(56,78,210);
+    color: rgb(255, 255, 255);
 }
 .billing-info {
     font-style: italic;
