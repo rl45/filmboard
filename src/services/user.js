@@ -328,17 +328,18 @@ export default class {
         return result;
     }
 
-    static updatePicture = async str => {
+    static updatePicture = async obj => {
         let result = {
             data: null,
             error: null
         };
 
-        const data = {
-            picture: str
-        };
+        const fd = new FormData();
+        for (const [key, value] of Object.entries(obj)) {
+            fd.append(key, value);
+        }
 
-        await axios.post(`${config.api}/users/upic/${session.get('user')._id}`, data)
+        await axios.post(`${config.api}/users/upic/${session.get('user')._id}`, fd)
             .then(resp => {
                 if (resp.status === 200) {
                     result.data = resp.data;

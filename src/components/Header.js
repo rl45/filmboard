@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import session from '../services/session';
 import {Redirect, NavLink} from 'react-router-dom';
 import config from '../config.json'
-import {swalError, swalName, swalSuccess, swalPassword, swalPicture, swalPosition} from "../utils/swal";
+import {swalError, swalName, swalSuccess, swalPassword, swalPicture, swalPosition, swalLoading, swalUploading} from "../utils/swal";
 import userService from "../services/user";
 import {getPackage} from '../utils/utils';
+import Swal from 'sweetalert2';
 
 export default function Header(props) {
     const [redirectTo, setRedirectTo] = useState(null);
@@ -77,8 +78,11 @@ export default function Header(props) {
     const handleUpdatePicture = e => {
         e.preventDefault();
         swalPicture(async file => {
-            const str = await getBaseUrl(file);
-            await userService.updatePicture(str)
+            // const str = await getBaseUrl(file);
+            swalUploading();
+            await userService.updatePicture({
+                file: file
+            })
                 .then(result => {
                     if (result.error) {
                         swalError(result.error);
@@ -87,8 +91,9 @@ export default function Header(props) {
 
                     if (result.data) {
                         swalSuccess(`Picture updated successfully!`);
-                        document.getElementById('img-circle-header').src = str;
+                        document.getElementById('img-circle-header').src = `${result.data.picture}?${new Date().getTime()}`;
                         session.set('user', result.data);
+                        Swal.close();
                     }
                 });
         });
