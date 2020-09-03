@@ -1,9 +1,9 @@
 body {
-  background-color: #343232;
+  background-color: #0D0F18;
   color: #fff;
 }
 .form-control {
-  background-color: #343232 !important;
+  background-color: #0D0F18 !important;
   color: #fff !important;
 }
 .navbar {
@@ -180,7 +180,7 @@ font-weight: 400;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px;
-  background-color: #343232;
+  background-color: #0D0F18;
   border-radius: 10px;
 }
 .item .form-control {
@@ -255,11 +255,11 @@ font-weight: 400;
   margin: 0px 7px;
 }
 .rodal-dialog {
-  background: #343232;
+  background: #0D0F18;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   color: #fff;
-  background-color: #343232;
+  background-color: #0D0F18;
 }
 .btn-pink {
   color: #fff;
