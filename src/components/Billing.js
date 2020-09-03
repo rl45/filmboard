@@ -205,7 +205,7 @@ export default function Billing(props) {
                                 <hr />
                                 <li>50mb Space for vendor uploads</li>
                             </ul>
-                            <button className="btn btn-outline-primary btn-pkg-choose"
+                            <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(1)}>Free Plan
                             </button>
                         </div>
@@ -224,7 +224,7 @@ export default function Billing(props) {
                                 <hr />
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-primary btn-pkg-choose"
+                            <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(2)}>Choose <strong>Plus Monthly</strong>
                             </button>
                         </div>
@@ -243,7 +243,7 @@ export default function Billing(props) {
                                 <hr />
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-primary btn-pkg-choose"
+                            <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(3)}>Choose <strong>Premium Monthly</strong>
                             </button>
                         </div>
@@ -265,7 +265,7 @@ export default function Billing(props) {
                                 <hr />
                                 <li>50mb Space for vendor uploads</li>
                             </ul>
-                            <button className="btn btn-outline-primary btn-pkg-choose"
+                            <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(1)}>That's fine
                             </button>
                         </div>
@@ -284,7 +284,7 @@ export default function Billing(props) {
                                 <hr />
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-primary btn-pkg-choose"
+                            <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(4)}>Choose <strong>Plus Annually</strong>
                             </button>
                         </div>
@@ -305,7 +305,7 @@ export default function Billing(props) {
                                 <hr />
                                 <li>Money back guarantee</li>
                             </ul>
-                            <button className="btn btn-outline-primary btn-pkg-choose"
+                            <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(5)}>Choose <strong>Premium Annually</strong>
                             </button>
                         </div>
