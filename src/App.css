@@ -106,7 +106,7 @@ body {
 .comment-box {
   padding: 10px 20px;
   margin-bottom: 7px;
-  background-color: #343a40;
+  background-color: #1c1e26;
   border-radius: 3px;
   /*border-bottom: 1px solid #cecece;*/
 }
@@ -233,7 +233,7 @@ font-weight: 400;
 #txtSearchBoards {
 }
 .comments-column {
-  /*background-color: #343a40!important;*/
+  /*background-color: #1c1e26!important;*/
 }
 .fa-bigger {
   font-size: 15px;
