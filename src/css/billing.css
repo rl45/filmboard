@@ -25,7 +25,7 @@
     color: rgb(255, 255, 255);
 }
 .pkg-price {
-    font-size: 24px;
+    font-size: 45px;
     color: rgb(255, 255, 255);
 }
 .billing-info {
@@ -75,4 +75,9 @@
 }
 .ul{
     list-style-type: none; /* Remove bullets */
+}
+
+/* Features that arnt included */
+.nonFeature{
+    color: #5B5D62;
 }
