@@ -198,12 +198,13 @@ export default function Billing(props) {
                             <span className="pkg-name">Starter</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
+                            <br/>
                             <ul className="ul">
-                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'5px'}}></i> 7 Projects</li>
+                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 7 Projects</li>
                                 <hr className="hr" />
-                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8',padding:'5px'}}></i> 5 Videos per project</li>
+                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8',padding:'7px'}}></i> 5 Videos per project</li>
                                 <hr className="hr" />
-                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8', padding:'5px'}}></i> 50MB Space for vendor uploads</li>
+                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8', padding:'7px'}}></i> 50MB Space for vendor uploads</li>
                                 <hr className="hr" />
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
@@ -216,14 +217,14 @@ export default function Billing(props) {
                             <span className="pkg-name">Plus</span>
                             <p className="pkg-price">$9</p>
                             <span className="billing-info">Per month, billed monthly.</span>
-                            <ul>
-                                <li>15 Projects</li>
+                            <ul className="ul">
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 15 Projects</li>
                                 <hr className="hr" />
-                                <li>20 Videos per project</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 20 Videos per project</li>
                                 <hr className="hr" />
-                                <li>200MB Space for vendor uploads</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 200MB Space for vendor uploads</li>
                                 <hr className="hr" />
-                                <li>Money back guarantee</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(2)}>Choose <strong>Plus Monthly</strong>
@@ -235,14 +236,14 @@ export default function Billing(props) {
                             <span className="pkg-name">Premium</span>
                             <p className="pkg-price">$15</p>
                             <span className="billing-info">Per month, billed monthly.</span>
-                            <ul>
-                                <li>Unlimited Projects</li>
+                            <ul className="ul">
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Unlimited Projects</li>
                                 <hr className="hr" />
-                                <li>Unlimited Videos per project</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Unlimited Videos per project</li>
                                 <hr className="hr" />
-                                <li>2GB Space for vendor uploads</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 2GB Space for vendor uploads</li>
                                 <hr className="hr" />
-                                <li>Money back guarantee</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(3)}>Choose <strong>Premium Monthly</strong>
@@ -259,12 +260,12 @@ export default function Billing(props) {
                             <span className="pkg-name">Starter</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
-                            <ul>
-                                <li>7 Projects</li>
+                            <ul className="ul">
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 7 Projects</li>
                                 <hr className="hr" />
-                                <li>5 Videos per project</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 5 Videos per project</li>
                                 <hr className="hr" />
-                                <li>50MB Space for vendor uploads</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 50MB Space for vendor uploads</li>
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(1)}>Free Plan
@@ -276,14 +277,14 @@ export default function Billing(props) {
                             <span className="pkg-name">Plus</span>
                             <p className="pkg-price">$99</p>
                             <span className="billing-info">Per year, billed annually.</span>
-                            <ul>
-                                <li>15 Projects</li>
+                            <ul className="ul">
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 15 Projects</li>
                                 <hr className="hr" />
-                                <li>20 Videos per project</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 20 Videos per project</li>
                                 <hr className="hr" />
-                                <li>200MB Space for vendor uploads</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 200MB Space for vendor uploads</li>
                                 <hr className="hr" />
-                                <li>Money back guarantee</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(4)}>Choose <strong>Plus Annually</strong>
@@ -295,16 +296,14 @@ export default function Billing(props) {
                             <span className="pkg-name">Premium</span>
                             <p className="pkg-price">$119</p>
                             <span className="billing-info">Per year, billed annually.</span>
-                            <ul>
-                                <li><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z" />
-                                </svg>Unlimited Projects</li>
+                            <ul className="ul">
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Unlimited Projects</li>
                                 <hr className="hr" />
-                                <li>20 Videos per project</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 20 Videos per project</li>
                                 <hr className="hr" />
-                                <li>2GB Space for vendor uploads</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 2GB Space for vendor uploads</li>
                                 <hr className="hr" />
-                                <li>Money back guarantee</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Money back guarantee</li>
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(5)}>Choose <strong>Premium Annually</strong>
