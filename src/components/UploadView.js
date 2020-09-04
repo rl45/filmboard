@@ -51,7 +51,7 @@ export default function Upload(props) {
         <div className="container">
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 text-left">
-                    <span className="h6 m-2">Files uploaded by the Vendors</span>
+                    <span className="h6 m-2">Files uploaded by Vendors</span>
                     <span className="comment-bar">|</span>
                     <span>Total size: {bytesToSize(totalSize)}</span>
                 </div>

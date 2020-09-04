@@ -89,7 +89,7 @@ export default function Comment(props) {
                     <textarea id="txt-comment" className="form-control" placeholder={props.type === 'moodboard' ? "Insert Comment..." : "Insert Comment..."}
                         value={comment} onChange={e => setComment(e.target.value)}></textarea>
                     <div className="invalid-feedback text-left">
-                        Please provide a comment text.
+                        Please provide a comment.
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ export default function Comment(props) {
                     </div> || <div className="col-sm-4"></div>
                 }
                 <div className="col-sm-4 text-right">
-                    <button className="btn btn-outline-light btn-sm mt-1 mr-1" onClick={handleComment}>Save</button>
+                    <button className="btn btn-outline-light btn-sm mt-1 mr-1" onClick={handleComment}>Comment</button>
                     <button className="btn btn-outline-light btn-sm mt-1" onClick={() => reset()}>Clear</button>
                 </div>
             </div>

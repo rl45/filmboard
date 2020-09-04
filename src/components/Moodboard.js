@@ -77,7 +77,7 @@ export default function Moodboard(props) {
 
         const projectId = window.location.href.split('/').pop();
         if(!projectId || projectId.length !== 24) {
-            swalInfo(`No Vendor files uploaded yet.`);
+            swalInfo(`Vendor has not uploaded any files.`);
             return;
         }
 
@@ -90,7 +90,7 @@ export default function Moodboard(props) {
                     }
 
                     if(result.data.length === 0) {
-                        swalInfo(`No Vendor files uploaded yet.`);
+                        swalInfo(`Vendor has not uploaded any files.`);
                         return;
                     }
 
@@ -141,7 +141,7 @@ export default function Moodboard(props) {
             {redirectTo && <Redirect push to={redirectTo}/>}
             <div className="row mt-10 mb-10">
                 <div className="col-6 col-sm-6 text-left">
-                    <small style={{color: 'grey'}}>* Only the items with valid title, URL and file will be saved. Others will be skipped.</small>
+                    <small style={{color: 'grey'}}>* Only items with valid title, URL and file will be saved. Others will be skipped.</small>
                 </div>
                 <div className="col-6 col-sm-6 text-right">
                     <button className="btn btn-sm btn-outline-light m-1"

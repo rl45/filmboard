@@ -45,8 +45,8 @@ export default function ProjectBox(props) {
                 <div className="row" onClick={handleOpen} title="Click to open project">
                     <div className="col-12 col-sm-12 text-left">
                         <p className="counts">
-                            <span><strong>{props.project.moodboards.length || 0}</strong> Moodboards</span> <br/>
-                            <span><strong>{props.project.storyboards.length || 0}</strong> Storyboards</span> <br/>
+                            <span><strong>{props.project.moodboards.length || 0}</strong> Moodboard Concepts</span> <br/>
+                            <span><strong>{props.project.storyboards.length || 0}</strong> Storyboard Cells</span> <br/>
                             <span><strong>{props.project.vendoruploads.length || 0}</strong> Vendor Uploads</span>
                         </p>
                     </div>

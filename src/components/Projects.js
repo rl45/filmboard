@@ -76,7 +76,7 @@ export default function Projects(props) {
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 text-center">
                     <input type="text" className="form-control" onChange={e => reload()}
-                    placeholder="Type to search..." id="txtSearchProjects" />
+                    placeholder="Search Projects..." id="txtSearchProjects" />
                 </div>
             </div>
             <div className="row mt-20">
