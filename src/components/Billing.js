@@ -103,7 +103,7 @@ export default function Billing(props) {
     }
 
     const handleCancelSubscription = async () => {
-        swalPkgChange(`Are you sure?`, `You can always subscribe to an other package.`, `info`, async () => {
+        swalPkgChange(`Are you sure?`, `You will lose the current upgraded features.`, `info`, async () => {
             await userService.cancelSubscription()
                 .then(result => {
                     if (result.error) {
