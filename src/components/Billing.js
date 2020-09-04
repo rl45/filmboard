@@ -316,7 +316,7 @@ export default function Billing(props) {
                             <ul className="ul">
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Unlimited Projects</li>
                                 <hr className="hr" />
-                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 20 Videos per Project</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Unlimited Videos per Project</li>
                                 <hr className="hr" />
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 2000MB Space for Vendor Uploads</li>
                                 <hr className="hr" />
