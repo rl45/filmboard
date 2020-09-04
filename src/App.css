@@ -191,7 +191,7 @@ font-weight: 400;
   border: none;
 }
 .video-thumbnail {
-  width: 100%;
+  width: 50%;
   height: auto;
   max-height: 200px;
   border-radius: 3px;
