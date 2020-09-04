@@ -198,14 +198,14 @@ export default function Billing(props) {
                             <span className="pkg-name">Starter</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
-                            <div>
-                                <p> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 7 Projects</p>
+                            <ul style="list-style-type:none">
+                                <li> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 7 Projects</li>
                                 <hr className="hr" />
-                                <p> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 5 Videos per project</p>
+                                <li> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 5 Videos per project</li>
                                 <hr className="hr" />
-                                <p> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 50MB Space for vendor uploads</p>
+                                <li> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 50MB Space for vendor uploads</li>
                                 <hr className="hr" />
-                            </div>
+                            </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(1)}>Free Plan
                             </button>
