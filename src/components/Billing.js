@@ -195,15 +195,15 @@ export default function Billing(props) {
                 <div className="row pkgs-row">
                     <div className="col-4 col-sm-4 col-md-4">
                         <div className="pkg">
-                            <span className="pkg-name">Free</span>
+                            <span className="pkg-name">Starter</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
          
-                                <li> <i class="fa fa-check" aria-hidden="true"></i> 7 Projects</li>
+                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 7 Projects</div>
                                 <hr className="hr" />
-                                <li> <i class="fa fa-check" aria-hidden="true"></i>5 Videos per project</li>
+                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 5 Videos per project</div>
                                 <hr className="hr" />
-                                <li> <i class="fa fa-check" aria-hidden="true"></i>50MB Space for vendor uploads</li>
+                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 50MB Space for vendor uploads</div>
                                 <hr className="hr" />
                           
                             <button className="btn btn-outline-custom btn-pkg-choose"
@@ -256,7 +256,7 @@ export default function Billing(props) {
                 <div className="row pkgs-row">
                     <div className="col-4 col-sm-4 col-md-4">
                         <div className="pkg">
-                            <span className="pkg-name">Free</span>
+                            <span className="pkg-name">Starter</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
                             <ul>
@@ -267,7 +267,7 @@ export default function Billing(props) {
                                 <li>50MB Space for vendor uploads</li>
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
-                                onClick={e => handleChoosePackage(1)}>That's fine
+                                onClick={e => handleChoosePackage(1)}>Free Plan
                             </button>
                         </div>
                     </div>
