@@ -75,9 +75,11 @@
 }
 .ul{
     list-style-type: none; /* Remove bullets */
+    padding-top: 10px;
 }
 
 /* Features that arnt included */
-.nonFeature{
+.nonfeature{
     color: #5B5D62;
+    display: inline
 }

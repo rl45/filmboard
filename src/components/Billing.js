@@ -195,10 +195,9 @@ export default function Billing(props) {
                 <div className="row pkgs-row">
                     <div className="col-4 col-sm-4 col-md-4">
                         <div className="pkg">
-                            <span className="pkg-name">Starter</span>
+                            <span className="pkg-name">Free</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
-                            <br/>
                             <ul className="ul">
                                 <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 7 Projects</li>
                                 <hr className="hr" />
@@ -267,7 +266,7 @@ export default function Billing(props) {
                 <div className="row pkgs-row">
                     <div className="col-4 col-sm-4 col-md-4">
                         <div className="pkg">
-                            <span className="pkg-name">Starter</span>
+                            <span className="pkg-name">Free</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
                             <ul className="ul">
@@ -300,6 +299,8 @@ export default function Billing(props) {
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 200MB Space for Vendor Uploads</li>
                                 <hr className="hr" />
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Money Back Guarantee</li>
+                                <hr className="hr" />
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Priority Support</li>
                                 <hr className="hr" />
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
