@@ -338,7 +338,7 @@ export default function MoodboardView(props) {
                         <p className="m-2">{playingItem && playingItem.description || ``}</p>
                     </div>
                 }
-                <div className="col-3 col-sm-3 col-md-3 text-left comments-column">
+                <div className="col-4 col-sm-4 col-md-4 text-left comments-column">
                     {
                         playingItem &&
                         <Comment
