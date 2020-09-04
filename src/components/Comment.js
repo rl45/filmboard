@@ -86,7 +86,7 @@ export default function Comment(props) {
             <div className="row" style={{marginBottom: '5px'}}>
                 <div className="col-sm-12 col-md-12">
                     <input type="hidden" id="txt-comment-id" value={id} />
-                    <textarea id="txt-comment" className="form-control" placeholder={props.type === 'moodboard' ? "Comment this video..." : "Comment this storyboard..."}
+                    <textarea id="txt-comment" className="form-control" placeholder={props.type === 'moodboard' ? "Insert Comment..." : "Insert Comment..."}
                         value={comment} onChange={e => setComment(e.target.value)}></textarea>
                     <div className="invalid-feedback text-left">
                         Please provide a comment text.
