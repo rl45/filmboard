@@ -201,9 +201,9 @@ export default function Billing(props) {
                             <ul className="ul">
                                 <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 7 Projects</li>
                                 <hr className="hr" />
-                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8',padding:'7px'}}></i> 5 Videos Per Project</li>
+                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8',padding:'7px'}}></i> 5 Videos per Project</li>
                                 <hr className="hr" />
-                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8', padding:'7px'}}></i> 50MB Space for Vendor Vploads</li>
+                                <li> <i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8', padding:'7px'}}></i> 50MB Space for Vendor Uploads</li>
                                 <hr className="hr" />
                                 <li><i class="fa fa-times" aria-hidden="true" style={{color:'#5B5D62' ,padding:'7px'}}></i> <p className="nonfeature">Money Back Guarantee</p></li>
                                 <hr className="hr" />
@@ -223,7 +223,7 @@ export default function Billing(props) {
                             <ul className="ul">
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 15 Projects</li>
                                 <hr className="hr" />
-                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 20 Videos Per Project</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 20 Videos per Project</li>
                                 <hr className="hr" />
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 200MB Space for Vendor Uploads</li>
                                 <hr className="hr" />
@@ -247,7 +247,7 @@ export default function Billing(props) {
                                 <hr className="hr" />
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Unlimited Videos per Project</li>
                                 <hr className="hr" />
-                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 2GB Space for Vendor Uploads</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 2000MB Space for Vendor Uploads</li>
                                 <hr className="hr" />
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Money Back Guarantee</li>
                                 <hr className="hr" />
@@ -318,7 +318,7 @@ export default function Billing(props) {
                                 <hr className="hr" />
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 20 Videos per Project</li>
                                 <hr className="hr" />
-                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 2GB Space for Vendor Uploads</li>
+                                <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> 2000MB Space for Vendor Uploads</li>
                                 <hr className="hr" />
                                 <li><i class="fa fa-check" aria-hidden="true" style={{color:'#3444D8' ,padding:'7px'}}></i> Money Back Guarantee</li>
                                 <hr className="hr" />
