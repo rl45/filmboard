@@ -323,7 +323,7 @@ export default function MoodboardView(props) {
                     playingItem &&
                     <div className="col-8 col-sm-8 col-md-8 text-left">
                         {renderDisplaying()}
-                        <p className="h4 m-2 text-left ml">{playingItem && playingItem.title || ``}</p>
+                        <p className="h4 m-2 text-left ml">{'   '}{playingItem && playingItem.title || ``}</p>
                         <p className="m-2 text-right">
                             <span className="badge badge-pill badge-light badge-like m-1" onClick={handleLike}
                                   title="Like this Moodboard">
@@ -335,7 +335,7 @@ export default function MoodboardView(props) {
                                   title="Comments count this Moodboard">
                             <i className="fa fa-comment fa-bigger"></i> {comments && comments.length || 0}</span>
                         </p>
-                        <p className="m-2 ml">{playingItem && playingItem.description || ``}</p>
+                <p className="m-2 ml">{'   '}{playingItem && playingItem.description || ``}</p>
                     </div>
                 }
                 <div className="col-3 col-sm-3 col-md-3 text-left comments-column">
