@@ -321,7 +321,7 @@ export default function MoodboardView(props) {
                 </div>
                 {
                     playingItem &&
-                    <div className="col-7 col-sm-7 col-md-7 text-left">
+                    <div className="col-8 col-sm-8 col-md-8 text-left">
                         {renderDisplaying()}
                         <p className="h4 m-2 text-left">{playingItem && playingItem.title || ``}</p>
                         <p className="m-2 text-right">
@@ -338,7 +338,7 @@ export default function MoodboardView(props) {
                         <p className="m-2">{playingItem && playingItem.description || ``}</p>
                     </div>
                 }
-                <div className="col-4 col-sm-4 col-md-4 text-left comments-column">
+                <div className="col-3 col-sm-3 col-md-3 text-left comments-column">
                     {
                         playingItem &&
                         <Comment
