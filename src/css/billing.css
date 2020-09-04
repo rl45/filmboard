@@ -73,3 +73,6 @@
     background-color: #1261a0;
     color: white;
 }
+.ul{
+    list-style-type: none; /* Remove bullets */
+}
