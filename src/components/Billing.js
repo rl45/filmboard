@@ -199,11 +199,11 @@ export default function Billing(props) {
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
          
-                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 7 Projects</div>
+                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8"></i> 7 Projects</div>
                                 <hr className="hr" />
-                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 5 Videos per project</div>
+                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8"></i> 5 Videos per project</div>
                                 <hr className="hr" />
-                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8;padding:5px;"></i> 50MB Space for vendor uploads</div>
+                                <div> <i class="fa fa-check" aria-hidden="true" style="color:#3444D8"></i> 50MB Space for vendor uploads</div>
                                 <hr className="hr" />
                           
                             <button className="btn btn-outline-custom btn-pkg-choose"
