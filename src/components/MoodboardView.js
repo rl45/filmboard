@@ -316,7 +316,7 @@ export default function MoodboardView(props) {
         <div className="container-fluid text-center mt-10">
             {loginOrSignup && <LoginOrSignup onClose={() => setLoginOrSignup(false)} />}
             <div className="row">
-                <div className="col-2 col-sm-2 col-md-2 text-center">
+                <div className="col-1 col-sm-1 col-md-1 text-center">
                     {renderThumbnails()}
                 </div>
                 {
