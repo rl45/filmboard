@@ -178,8 +178,8 @@ export default function Billing(props) {
                             handleDiameter={30}
                             uncheckedIcon={false}
                             checkedIcon={false}
-                            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                            boxShadow="0px 1px 5px rGBa(0, 0, 0, 0.6)"
+                            activeBoxShadow="0px 0px 1px 10px rGBa(0, 0, 0, 0.2)"
                             height={20}
                             width={48}
                             className="react-switch"
@@ -198,13 +198,14 @@ export default function Billing(props) {
                             <span className="pkg-name">Free</span>
                             <p className="pkg-price">$0</p>
                             <span className="billing-info">Free forever.</span>
-                            <ul>
-                                <li>7 Projects</li>
+         
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 7 Projects</li>
                                 <hr className="hr" />
-                                <li>5 Videos per project</li>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i>5 Videos per project</li>
                                 <hr className="hr" />
-                                <li>50mb Space for vendor uploads</li>
-                            </ul>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i>50MB Space for vendor uploads</li>
+                                <hr className="hr" />
+                          
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(1)}>Free Plan
                             </button>
@@ -220,7 +221,7 @@ export default function Billing(props) {
                                 <hr className="hr" />
                                 <li>20 Videos per project</li>
                                 <hr className="hr" />
-                                <li>200mb Space for vendor uploads</li>
+                                <li>200MB Space for vendor uploads</li>
                                 <hr className="hr" />
                                 <li>Money back guarantee</li>
                             </ul>
@@ -239,7 +240,7 @@ export default function Billing(props) {
                                 <hr className="hr" />
                                 <li>Unlimited Videos per project</li>
                                 <hr className="hr" />
-                                <li>2gb Space for vendor uploads</li>
+                                <li>2GB Space for vendor uploads</li>
                                 <hr className="hr" />
                                 <li>Money back guarantee</li>
                             </ul>
@@ -263,7 +264,7 @@ export default function Billing(props) {
                                 <hr className="hr" />
                                 <li>5 Videos per project</li>
                                 <hr className="hr" />
-                                <li>50mb Space for vendor uploads</li>
+                                <li>50MB Space for vendor uploads</li>
                             </ul>
                             <button className="btn btn-outline-custom btn-pkg-choose"
                                 onClick={e => handleChoosePackage(1)}>That's fine
@@ -280,7 +281,7 @@ export default function Billing(props) {
                                 <hr className="hr" />
                                 <li>20 Videos per project</li>
                                 <hr className="hr" />
-                                <li>200mb Space for vendor uploads</li>
+                                <li>200MB Space for vendor uploads</li>
                                 <hr className="hr" />
                                 <li>Money back guarantee</li>
                             </ul>
@@ -301,7 +302,7 @@ export default function Billing(props) {
                                 <hr className="hr" />
                                 <li>20 Videos per project</li>
                                 <hr className="hr" />
-                                <li>2gb Space for vendor uploads</li>
+                                <li>2GB Space for vendor uploads</li>
                                 <hr className="hr" />
                                 <li>Money back guarantee</li>
                             </ul>
@@ -320,7 +321,7 @@ export default function Billing(props) {
                         <StripeCheckout
                             token={handleToken}
                             stripeKey={config.stripePublishableKey}
-                            allowRememberMe={false}
+                            allowRemeMBerMe={false}
                             shippingAddress={false}
                             billingAddress={false}
                             name={config.appTitle}
