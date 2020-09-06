@@ -101,7 +101,7 @@ export default function ProjectPage(props) {
                     {
                         session.get('user') &&
                         <span>
-                            <button className="btn btn-pink btn-sm m-1" onClick={handleShare}>Generate URL</button>
+                            <button className="btn btn-pink btn-sm m-1" onClick={handleShare}>Send Client URL</button>
                         </span>
                     }
                     {
