@@ -78,7 +78,7 @@ export default function Upload(props) {
                             <section className="dropzone-section">
                                 <div {...getRootProps()}>
                                     <input {...getInputProps()} />
-                                    <p className="dropzone-p">Drag 'n' drop files here, or click to select files to send to the project owner</p>
+                                    <p className="dropzone-p">Drop or select files to send to the project owner</p>
                                 </div>
                             </section>
                         )}
