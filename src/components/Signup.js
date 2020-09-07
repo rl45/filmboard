@@ -62,7 +62,7 @@ export default function Signup(props) {
         <div className="container-fluid text-center div-signup" style={{marginTop: '50px', width: '600px'}}>
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12">
-                <h1 className="m-4">Avoid Miscommunication. Increase Sales for Videography Services. Prevent Endless Revisions</h1>
+                <h1 className="m-4">Avoid Miscommunication</h1>
                     <h2 className="m-4">Sign Up for Free</h2>
                     <form onSubmit={handleSignup}>
                         <div className="form-group">
