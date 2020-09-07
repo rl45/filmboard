@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import userService from '../services/user';
+import config from "../config.json";
 import session from '../services/session';
 
 export default function Signup(props) {
@@ -9,6 +10,7 @@ export default function Signup(props) {
     const [position, setPosition] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    const [imgUrl, setImgUrl] = useState(`${config.appUrl}/images/banner.jpg`);
 
     useEffect(() => {
         session.clear();
@@ -16,20 +18,20 @@ export default function Signup(props) {
 
     const handleSignup = async e => {
         e.preventDefault();
-        if(!fullname || fullname.length === 0) {
+        if (!fullname || fullname.length === 0) {
             setErrorMessage(`Full Name is required.`);
             return;
         }
-        if(!email || email.length === 0) {
+        if (!email || email.length === 0) {
             setErrorMessage(`Email is required.`);
             return;
         } else {
-            if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) === false) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) === false) {
                 setErrorMessage(`Please enter a valid email address.`);
                 return;
             }
         }
-        if(!password || password.length === 0) {
+        if (!password || password.length === 0) {
             setErrorMessage(`Password is required.`);
             return;
         }
@@ -59,44 +61,46 @@ export default function Signup(props) {
     }
 
     return (
-        <div className="container-fluid text-center div-signup" style={{marginTop: '50px', width: '600px'}}>
-             <img id="banner" src="../../public/images/banner.jpg" alt="Client Collaboration Software Filmboard"/>
-            <div className="row">
-                <div className="col-12 col-sm-12 col-md-12">
-                <h1 className="m-4">Avoid Miscommunication</h1>
-                    <h2 className="m-4">Sign Up for Free</h2>
-                    <form onSubmit={handleSignup}>
-                        <div className="form-group">
-                            <input type="text" className="form-control" id="txtSignupFullname"
-                                   placeholder="Full Name" required="required" onBlur={formatFullname}
-                                   value={fullname} onChange={e => setFullname(e.target.value)} />
-                        </div>
-                        <div className="form-group">
-                            <input type="email" className="form-control"
-                                   placeholder="Email" required="required"
-                                   value={email} onChange={e => setEmail(e.target.value)}/>
-                        </div>
-                        <div className="form-group">
-                            <input type="password" className="form-control"
-                                   placeholder="Password" required="required"
-                                   value={password} onChange={e => setPassword(e.target.value)}/>
-                        </div>
-                        <div className="form-group">
-                            <input type="text" className="form-control"
-                                   placeholder="Company Position"
-                                   value={position} onChange={e => setPosition(e.target.value)}/>
-                        </div>
+        <div>
+            <img id="banner" src={imgUrl} alt="Client Collaboration Software Filmboard" />
+            <div className="container-fluid text-center div-signup" style={{ marginTop: '50px', width: '600px' }}>
+                <div className="row">
+                    <div className="col-12 col-sm-12 col-md-12">
+                        <h1 className="m-4">Avoid Miscommunication</h1>
+                        <h2 className="m-4">Sign Up for Free</h2>
+                        <form onSubmit={handleSignup}>
+                            <div className="form-group">
+                                <input type="text" className="form-control" id="txtSignupFullname"
+                                    placeholder="Full Name" required="required" onBlur={formatFullname}
+                                    value={fullname} onChange={e => setFullname(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <input type="email" className="form-control"
+                                    placeholder="Email" required="required"
+                                    value={email} onChange={e => setEmail(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <input type="password" className="form-control"
+                                    placeholder="Password" required="required"
+                                    value={password} onChange={e => setPassword(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <input type="text" className="form-control"
+                                    placeholder="Company Position"
+                                    value={position} onChange={e => setPosition(e.target.value)} />
+                            </div>
 
-                        {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
+                            {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
 
-                        {successMessage && <div className="alert alert-success">{successMessage}</div>}
+                            {successMessage && <div className="alert alert-success">{successMessage}</div>}
 
-                        {props.forPopup === false && <a href="/login" className="btn btn-link">Login here</a>}
+                            {props.forPopup === false && <a href="/login" className="btn btn-link">Login here</a>}
 
-                        <button type="submit" className="btn btn-pink"
+                            <button type="submit" className="btn btn-pink"
                                 onClick={e => handleSignup(e)}>Signup
                         </button>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
