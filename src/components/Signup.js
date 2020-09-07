@@ -60,6 +60,7 @@ export default function Signup(props) {
 
     return (
         <div className="container-fluid text-center div-signup" style={{marginTop: '50px', width: '600px'}}>
+             <img id="banner" src="../../public/images/banner.jpg" alt="Client Collaboration Software Filmboard"/>
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12">
                 <h1 className="m-4">Avoid Miscommunication</h1>
