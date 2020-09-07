@@ -8,7 +8,7 @@ export default function ThumbnailYouTube(props) {
         try {
             const url = new URL(props.item.fileUrl);
             const id = url.searchParams.get('v');
-            setId(`http://img.youtube.com/vi/${id}/maxresdefault.jpg`);//maxres1.jpg
+            setId(`https://img.youtube.com/vi/${id}/maxresdefault.jpg`);//maxres1.jpg
         }
         catch (err) {
             setId(`${config.appUrl}/images/default-video.png`);

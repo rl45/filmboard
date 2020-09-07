@@ -9,7 +9,7 @@ export default function ThumbnailVimeo(props) {
     useEffect(() => {
         const id = props.item.fileUrl.split('/').pop();
         (async () => {
-            await axios.get(`http://vimeo.com/api/v2/video/${id}.json`)
+            await axios.get(`https://vimeo.com/api/v2/video/${id}.json`)
                 .then(resp => {
                     if (resp.status === 200) {
                         const data = resp.data;
