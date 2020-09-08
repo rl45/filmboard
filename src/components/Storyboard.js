@@ -4,7 +4,7 @@ import StoryboardCell from "./StoryboardCell";
 
 export default function Storyboard(props) {
 
-    const init = [{fileUrl: '', title: ''}];
+    const init = [{fileUrl: '', title: '', description: '', shot: 'Shot Type', angle: 'Angle', movement: 'Movement', audio: 'Audio'}];
     const [items, setItems] = useState(init);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function Storyboard(props) {
 
     const handleAddMore = () => {
         const t = Array.from(items);
-        t.push({fileUrl: '', title: ''});
+        t.push({fileUrl: '', title: '', description: '', shot: 'Shot', angle: 'Angle', movement: 'Movement', audio: 'Audio'});
         setItems(t);
     }
 
