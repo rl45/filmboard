@@ -70,28 +70,36 @@ export default function Signup(props) {
                         <h2 className="m-4">Sign Up for Free</h2>
                         <form onSubmit={handleSignup}>
                             <div className="form-group">
-                                <i class="fa fa-user icon"></i>
-                                <input type="text" className="form-control" id="txtSignupFullname"
-                                    placeholder="Full Name" required="required" onBlur={formatFullname}
-                                    value={fullname} onChange={e => setFullname(e.target.value)} />
+                                <div class="input-container">
+                                    <i class="fa fa-user icon"></i>
+                                    <input type="text" className="form-control" id="txtSignupFullname"
+                                        placeholder="Full Name" required="required" onBlur={formatFullname}
+                                        value={fullname} onChange={e => setFullname(e.target.value)} />
+                                </div>
                             </div>
                             <div className="form-group">
-                                <i class="fa fa-envelope icon"></i>
-                                <input type="email" className="form-control"
-                                    placeholder="Email" required="required"
-                                    value={email} onChange={e => setEmail(e.target.value)} />
+                                <div class="input-container">
+                                    <i class="fa fa-envelope icon"></i>
+                                    <input type="email" className="form-control"
+                                        placeholder="Email" required="required"
+                                        value={email} onChange={e => setEmail(e.target.value)} />
+                                </div>
                             </div>
                             <div className="form-group">
-                                <i class="fa fa-key icon"></i>
-                                <input type="password" className="form-control"
-                                    placeholder="Password" required="required"
-                                    value={password} onChange={e => setPassword(e.target.value)} />
+                                <div class="input-container">
+                                    <i class="fa fa-key icon"></i>
+                                    <input type="password" className="form-control"
+                                        placeholder="Password" required="required"
+                                        value={password} onChange={e => setPassword(e.target.value)} />
+                                </div>
                             </div>
                             <div className="form-group">
-                                <i class="fa fa-building"></i>
-                                <input type="text" className="form-control"
-                                    placeholder="Company Position"
-                                    value={position} onChange={e => setPosition(e.target.value)} />
+                                <div class="input-container">
+                                    <i class="fa fa-building"></i>
+                                    <input type="text" className="form-control"
+                                        placeholder="Company Position"
+                                        value={position} onChange={e => setPosition(e.target.value)} />
+                                </div>
                             </div>
 
                             {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}

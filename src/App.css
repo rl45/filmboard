@@ -151,6 +151,12 @@ body {
   text-align: center;
 }
 
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .badge {
 font-weight: 400;
 }
