@@ -233,7 +233,7 @@ font-weight: 400;
 }
 .image-player {
   object-fit: cover;
-  width: 100%;
+  width: auto;
   height: auto;
   /*border-radius: 10px;*/
 }
