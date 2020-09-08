@@ -75,8 +75,7 @@ export default function Signup(props) {
                                     <input type="text" className="form-control input-field" id="txtSignupFullname"
                                         placeholder="Full Name" required="required" onBlur={formatFullname}
                                         value={fullname} onChange={e => setFullname(e.target.value)} >
-                                             <i class="fa fa-user icon"></i>
-                                            </input>
+                                    </input>
                                 </div>
                             </div>
                             <div className="form-group">
@@ -97,9 +96,9 @@ export default function Signup(props) {
                             </div>
                             <div className="form-group">
                                 <div class="input-container">
-                                    <i class="fa fa-building"></i>
+                                    <i class="fa fa-building icon"></i>
                                     <input type="text" className="form-control input-field"
-                                        placeholder="Company Position"
+                                        placeholder="Company Position (Optional)"
                                         value={position} onChange={e => setPosition(e.target.value)} />
                                 </div>
                             </div>
