@@ -35,11 +35,11 @@ export default function StoryboardView(props) {
                 return props.storyboards.map(x => <StoryboardViewCell key={x._id} story={x}/>);
             }
             else {
-                return <div className="not-found">No storyboards found.</div>;
+                return <div className="not-found">Storyboard has not been created.</div>;
             }
         }
         else {
-            return <div className="not-found">No storyboards found.</div>;
+            return <div className="not-found">Storyboard has not been created.</div>;
         }
     }
 
