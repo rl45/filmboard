@@ -10,11 +10,20 @@ export default function StoryboardCell(props) {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    const [shot, setShot] = useState('');
+    const [angle, setAngle] = useState('');
+    const [movement, setMovement] = useState('');
+    const [audio, setAudio] = useState('');
+
 
     useEffect(() => {
         if (props.item) {
             setTitle(props.item.title);
             setDescription(props.item.description);
+            setShot(props.item.shot)
+            setAngle(props.item.angle)
+            setMovement(props.item.movement)
+            setAudio(props.item.audio)
         }
     }, []);
 
@@ -72,14 +81,48 @@ export default function StoryboardCell(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <select class="custom-select mr-sm-2">
+                            <select class="custom-select mr-sm-2" onChange={e => setShot(e.target.value)}>
                                 <option selected>Shot Type</option>
                                 <option value="1">WS - Wide Shot</option>
                                 <option value="2">VWS - Very Wide Shot</option>
                                 <option value="3">MS - Mid Shot</option>
                                 <option value="4">MCU - Medium Close Up</option>
-                                <option value="3">CU - Close-Up</option>
-                                <option value="3">ECU - Extreme Close Up</option>
+                                <option value="5">CU - Close-Up</option>
+                                <option value="6">ECU - Extreme Close Up</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <select class="custom-select mr-sm-2" onChange={e => setAngle(e.target.value)}>
+                                <option selected>Angle</option>
+                                <option value="1">Eye Level</option>
+                                <option value="2">High Angle</option>
+                                <option value="3">Low Angle</option>
+                                <option value="4">Dutch Angle/Tilt</option>
+                                <option value="5">Over the Shoulder (OTS)</option>
+                                <option value="6">Birds-Eye View</option>
+                                <option value="7">Point of View (POV)</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <select class="custom-select mr-sm-2" onChange={e => setMovement(e.target.value)}>
+                                <option selected>Movement</option>
+                                <option value="1">Static</option>
+                                <option value="2">Pan</option>
+                                <option value="3">Tilt</option>
+                                <option value="4">Dolly</option>
+                                <option value="5">Crane/Boom</option>
+                                <option value="6">Handheld</option>
+                                <option value="7">Zoom</option>
+                                <option value="8">Rack Focus</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <select class="custom-select mr-sm-2" onChange={e => setAudio(e.target.value)}>
+                                <option selected>Audio</option>
+                                <option value="1">Boom</option>
+                                <option value="2">Lav</option>
+                                <option value="3">Lav and Boom</option>
+                                <option value="4">VO (Voice Over)</option>
                             </select>
                         </div>
                     </div>
