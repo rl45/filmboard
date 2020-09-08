@@ -66,12 +66,11 @@ export default function Signup(props) {
             <div className="container-fluid text-center div-signup" style={{ marginTop: '50px', width: '600px' }}>
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12">
-                        <h1 className="m-4">Avoid Miscommunication</h1>
+                        <h1 className="m-4">Made By Filmmakers</h1>
                         <h2 className="m-4">Sign Up for Free</h2>
                         <form onSubmit={handleSignup}>
                             <div className="form-group">
                                 <div class="input-container">
-                                    <i class="fa fa-user icon"></i>
                                     <input type="text" className="form-control input-field" id="txtSignupFullname"
                                         placeholder="Full Name" required="required" onBlur={formatFullname}
                                         value={fullname} onChange={e => setFullname(e.target.value)} >
@@ -80,7 +79,6 @@ export default function Signup(props) {
                             </div>
                             <div className="form-group">
                                 <div class="input-container">
-                                    <i class="fa fa-envelope icon"></i>
                                     <input type="email" className="form-control input-field"
                                         placeholder="Email" required="required"
                                         value={email} onChange={e => setEmail(e.target.value)} />
@@ -88,7 +86,6 @@ export default function Signup(props) {
                             </div>
                             <div className="form-group">
                                 <div class="input-container">
-                                    <i class="fa fa-key icon"></i>
                                     <input type="password" className="form-control input-field"
                                         placeholder="Password" required="required"
                                         value={password} onChange={e => setPassword(e.target.value)} />
@@ -96,7 +93,6 @@ export default function Signup(props) {
                             </div>
                             <div className="form-group">
                                 <div class="input-container">
-                                    <i class="fa fa-building icon"></i>
                                     <input type="text" className="form-control input-field"
                                         placeholder="Company Position (Optional)"
                                         value={position} onChange={e => setPosition(e.target.value)} />
