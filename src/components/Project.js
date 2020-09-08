@@ -113,10 +113,10 @@ export default function Project(props) {
                     file: file,
                     title: title,
                     description: x.querySelector(`.item-description`).value || '',
-                    shot: x.querySelector(`.item-shot`).value || '',
-                    angle: x.querySelector(`.item-angle`).value || '',
-                    movement: x.querySelector(`.item-movement`).value || '',
-                    audio: x.querySelector(`.item-audio`).value || ''
+                    shot: x.querySelector(`.item-shot`).value,
+                    angle: x.querySelector(`.item-angle`).value,
+                    movement: x.querySelector(`.item-movement`).value,
+                    audio: x.querySelector(`.item-audio`).value
                 });
             }
         });

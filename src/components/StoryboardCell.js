@@ -10,10 +10,10 @@ export default function StoryboardCell(props) {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [shot, setShot] = useState('');
-    const [angle, setAngle] = useState('');
-    const [movement, setMovement] = useState('');
-    const [audio, setAudio] = useState('');
+    const [shot, setShot] = useState('Shot Type');
+    const [angle, setAngle] = useState('Angle');
+    const [movement, setMovement] = useState('Movement');
+    const [audio, setAudio] = useState('Audio');
 
 
     useEffect(() => {
