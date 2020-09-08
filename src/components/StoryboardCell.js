@@ -16,32 +16,32 @@ export default function StoryboardCell(props) {
     const [movement, setMovement] = useState('');
     const [audio, setAudio] = useState('');
 
-    const shots = [
-        {
-          value: 'WS',
-          label: "WS - Wide Shot"
-        },
-        {
-          value: 'VWS',
-          label: "VWS - Very Wide Shot"
-        },
-        {
-          value: 'MS',
-          label: "MS - Mid Shot"
-        },
-        {
-          value: "MCU",
-          label: "MCU - Medium Close Up"
-        },
-        {
-          value: "CU",
-          label: "CU - Close-Up"
-        },
-        {
-          value: "ECU",
-          label: "ECU - Extreme Close Up"
-        }
-      ];
+    // const shots = [
+    //     {
+    //       value: 'WS',
+    //       label: "WS - Wide Shot"
+    //     },
+    //     {
+    //       value: 'VWS',
+    //       label: "VWS - Very Wide Shot"
+    //     },
+    //     {
+    //       value: 'MS',
+    //       label: "MS - Mid Shot"
+    //     },
+    //     {
+    //       value: "MCU",
+    //       label: "MCU - Medium Close Up"
+    //     },
+    //     {
+    //       value: "CU",
+    //       label: "CU - Close-Up"
+    //     },
+    //     {
+    //       value: "ECU",
+    //       label: "ECU - Extreme Close Up"
+    //     }
+    //   ];
 
 
     useEffect(() => {
@@ -109,13 +109,22 @@ export default function StoryboardCell(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <Select placeholder="Shot Type" className="custom-select mr-sm-2 form-control item-shot" value={shots.find(obj => obj.value === shot)} options={shots} onChange={e => {
+                            {/* <Select placeholder="Shot Type" className="custom-select mr-sm-2 form-control item-shot" value={shots.find(obj => obj.value === shot)} options={shots} onChange={e => {
                                 setShot(e.value)
-                            }}/>
+                            }}/> */}
+                             <select type="text" className="custom-select mr-sm-2 form-control item-shot" value={shot} onChange={e => setShot(e.target.value)}>
+                                <option value=''>Select shot</option>
+                                <option value='WS'>WS - Wide Shot</option>
+                                <option value="VWS">VWS - Very Wide Shot</option>
+                                <option value="MS">MS - Mid Shot</option>
+                                <option value="MCU">MCU - Medium Close Up</option>
+                                <option value="CU">CU - Close-Up</option>
+                                <option value="ECU">ECU - Extreme Close Up</option>
+                            </select>
                         </div>
                         <div className="form-group">
                             <select type="text" className="custom-select mr-sm-2 form-control item-angle" value={angle} onChange={e => setAngle(e.target.value)}>
-                                <option value=''>Angle</option>
+                                <option value=''>Select angle</option>
                                 <option value="Eye">Eye Level</option>
                                 <option value="High">High Angle</option>
                                 <option value="Low">Low Angle</option>
@@ -127,7 +136,7 @@ export default function StoryboardCell(props) {
                         </div>
                         <div className="form-group">
                             <select type="text" className="custom-select mr-sm-2 form-control item-movement" value={movement} onChange={e => setMovement(e.target.value)}>
-                                <option value=''>Movement</option>
+                                <option value=''>Select movement</option>
                                 <option value="Static">Static</option>
                                 <option value="Pan">Pan</option>
                                 <option value="Tilt">Tilt</option>
@@ -140,7 +149,7 @@ export default function StoryboardCell(props) {
                         </div>
                         <div className="form-group">
                             <select type="text" className="custom-select mr-sm-2 form-control item-audio"  value={audio} onChange={e => setAudio(e.target.value)}>
-                                <option value=''>Audio</option>
+                                <option value=''>Select audio</option>
                                 <option value="Boom">Boom</option>
                                 <option value="Lav">Lav</option>
                                 <option value="Lav/Boom">Lav and Boom</option>

@@ -91,7 +91,7 @@ export default function Project(props) {
             if (type === 'audio' || type === 'image') {
                 let title = x.querySelector(`.item-title`).value || '';
                 let file = x.querySelector(`.item-file`).files[0] || null;
-                if (title && title.length > 0 && file) {
+                if (title && title.length > 0) {
                     moodboard.push({
                         id: x.querySelector(`.item-id`).value || '',
                         type: type,
@@ -107,7 +107,7 @@ export default function Project(props) {
         document.querySelectorAll(`.storyboard .item`).forEach(x => {
             let title = x.querySelector(`.item-title`).value || '';
             let file = x.querySelector(`.item-file`).files[0] || null;
-            if (title && title.length > 0 && file) {
+            if (title && title.length > 0) {
                 storyboard.push({
                     id: x.querySelector(`.item-id`).value || '',
                     file: file,
@@ -119,9 +119,6 @@ export default function Project(props) {
                     audio: x.querySelector(`.item-audio`).value || ''
                 });
             }
-            console.log(x.querySelector(`.item-description`))
-            console.log(x.querySelector(`.item-shot`))
-            console.log(x.querySelector(`.item-angle`))
         });
 
         // if (!moodboard || moodboard.length === 0) {
