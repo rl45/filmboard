@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import session from '../services/session';
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import moment from "moment";
 import {
     swalDeleteForm,
@@ -112,7 +112,11 @@ export default function Project(props) {
                     id: x.querySelector(`.item-id`).value || '',
                     file: file,
                     title: title,
-                    description: x.querySelector(`.item-description`).value || ''
+                    description: x.querySelector(`.item-description`).value || '',
+                    shot: x.querySelector(`.item-shot`).value || '',
+                    angle: x.querySelector(`.item-angle`).value || '',
+                    movement: x.querySelector(`.item-movement`).value || '',
+                    audio: x.querySelector(`.item-audio`).value || ''
                 });
             }
         });
@@ -278,6 +282,10 @@ export default function Project(props) {
                 await storyboardService.add({
                     title: k.title,
                     description: k.description,
+                    shot: k.shot,
+                    angle: k.angle,
+                    movement: k.movement,
+                    audio: k.audio,
                     projectId: project._id,
                     file: k.file,
                     userId: session.get('user').id,
@@ -296,12 +304,20 @@ export default function Project(props) {
                     await storyboardService.update(k.id, {
                         title: k.title,
                         description: k.description,
+                        shot: k.shot,
+                        angle: k.angle,
+                        movement: k.movement,
+                        audio: k.audio,
                         file: k.file,
                     });
                 } else {
                     await storyboardService.add({
                         title: k.title,
                         description: k.description,
+                        shot: k.shot,
+                        angle: k.angle,
+                        movement: k.movement,
+                        audio: k.audio,
                         projectId: project._id,
                         file: k.file,
                         userId: session.get('user').id,
@@ -335,16 +351,16 @@ export default function Project(props) {
 
     return (
         <div className="container">
-            {redirectTo && <Redirect push to={redirectTo}/>}
-            <div className="row" style={{marginTop: '10px', marginBottom: '10px'}}>
+            {redirectTo && <Redirect push to={redirectTo} />}
+            <div className="row" style={{ marginTop: '10px', marginBottom: '10px' }}>
                 <div className="col-12 col-sm-12 text-right">
                     <button className="btn btn-pink m-1"
-                            onClick={handleSave}>Save Changes
+                        onClick={handleSave}>Save Changes
                     </button>
                     {
                         project && project._id &&
                         <button className="btn btn-danger m-1"
-                                onClick={handleDeleteProject}>Delete
+                            onClick={handleDeleteProject}>Delete
                         </button>
                     }
                 </div>
@@ -353,13 +369,13 @@ export default function Project(props) {
                 <div className="col-12 col-sm-12 text-center">
                     <div className="form-group">
                         <input type="text" className="form-control"
-                               placeholder="Project title"
-                               value={title} onChange={e => setTitle(e.target.value)}/>
+                            placeholder="Project title"
+                            value={title} onChange={e => setTitle(e.target.value)} />
                     </div>
                     <div className="form-group">
                         <textarea type="text" className="form-control"
-                                  placeholder="Project description (optional)" rows={10}
-                                  value={description} onChange={e => setDescription(e.target.value)}/>
+                            placeholder="Project description (optional)" rows={10}
+                            value={description} onChange={e => setDescription(e.target.value)} />
                     </div>
                 </div>
             </div>
@@ -370,18 +386,18 @@ export default function Project(props) {
                             <ul className="nav nav-tabs" id="myTab" role="tablist">
                                 <li className="nav-item">
                                     <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home"
-                                       role="tab"
-                                       aria-controls="home" aria-selected="true">Moodboard</a>
+                                        role="tab"
+                                        aria-controls="home" aria-selected="true">Moodboard</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
-                                       role="tab"
-                                       aria-controls="profile" aria-selected="false">Storyboard</a>
+                                        role="tab"
+                                        aria-controls="profile" aria-selected="false">Storyboard</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" id="contact-tab" data-toggle="tab" href="#contact"
-                                       role="tab"
-                                       aria-controls="contact" aria-selected="false">Vendors</a>
+                                        role="tab"
+                                        aria-controls="contact" aria-selected="false">Vendors</a>
                                 </li>
                             </ul>
                         </div>
@@ -392,16 +408,16 @@ export default function Project(props) {
                 <div className="col-12 col-sm-12 text-center">
                     <div className="tab-content" id="myTabContent">
                         <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <Moodboard reloadProject={reloadProject} moodboards={moodboards || null}/>
+                            <Moodboard reloadProject={reloadProject} moodboards={moodboards || null} />
                         </div>
                         <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <Storyboard storyboards={storyboards || null}/>
+                            <Storyboard storyboards={storyboards || null} />
                         </div>
                         <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                             {
                                 project &&
                                 <UploadAndViewVendorFiles
-                                    showDeleteButton={session.get('user') && session.get('user')._id === project.userId._id}/>
+                                    showDeleteButton={session.get('user') && session.get('user')._id === project.userId._id} />
                             }
                         </div>
                     </div>

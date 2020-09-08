@@ -86,46 +86,46 @@ export default function StoryboardCell(props) {
                                 setShot(e.target.value)
                             }}>
                                 <option selected>Shot Type</option>
-                                <option value="1">WS - Wide Shot</option>
-                                <option value="2">VWS - Very Wide Shot</option>
-                                <option value="3">MS - Mid Shot</option>
-                                <option value="4">MCU - Medium Close Up</option>
-                                <option value="5">CU - Close-Up</option>
-                                <option value="6">ECU - Extreme Close Up</option>
+                                <option value="WS">WS - Wide Shot</option>
+                                <option value="VWS">VWS - Very Wide Shot</option>
+                                <option value="MS">MS - Mid Shot</option>
+                                <option value="MCU">MCU - Medium Close Up</option>
+                                <option value="CU">CU - Close-Up</option>
+                                <option value="ECU">ECU - Extreme Close Up</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <select class="custom-select mr-sm-2" value={angle} onChange={e => setAngle(e.target.value)}>
                                 <option selected>Angle</option>
-                                <option value="1">Eye Level</option>
-                                <option value="2">High Angle</option>
-                                <option value="3">Low Angle</option>
-                                <option value="4">Dutch Angle/Tilt</option>
-                                <option value="5">Over the Shoulder (OTS)</option>
-                                <option value="6">Birds-Eye View</option>
-                                <option value="7">Point of View (POV)</option>
+                                <option value="Eye">Eye Level</option>
+                                <option value="High">High Angle</option>
+                                <option value="Low">Low Angle</option>
+                                <option value="Dutch">Dutch Angle/Tilt</option>
+                                <option value="OTS">Over the Shoulder (OTS)</option>
+                                <option value="BEV">Birds-Eye View (BEV)</option>
+                                <option value="POV">Point of View (POV)</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <select class="custom-select mr-sm-2" value={movement} onChange={e => setMovement(e.target.value)}>
                                 <option selected>Movement</option>
-                                <option value="1">Static</option>
-                                <option value="2">Pan</option>
-                                <option value="3">Tilt</option>
-                                <option value="4">Dolly</option>
-                                <option value="5">Crane/Boom</option>
-                                <option value="6">Handheld</option>
-                                <option value="7">Zoom</option>
-                                <option value="8">Rack Focus</option>
+                                <option value="Static">Static</option>
+                                <option value="Pan">Pan</option>
+                                <option value="Tilt">Tilt</option>
+                                <option value="Dolly">Dolly</option>
+                                <option value="Crane/Boom">Crane/Boom</option>
+                                <option value="Handheld">Handheld</option>
+                                <option value="Zoom">Zoom</option>
+                                <option value="Rack Focus">Rack Focus</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <select class="custom-select mr-sm-2" value={audio} onChange={e => setAudio(e.target.value)}>
                                 <option selected>Audio</option>
-                                <option value="1">Boom</option>
-                                <option value="2">Lav</option>
-                                <option value="3">Lav and Boom</option>
-                                <option value="4">VO (Voice Over)</option>
+                                <option value="Boom">Boom</option>
+                                <option value="Lav">Lav</option>
+                                <option value="Lav/Boom">Lav and Boom</option>
+                                <option value="VO">VO (Voice Over)</option>
                             </select>
                         </div>
                     </div>
