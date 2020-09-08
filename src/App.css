@@ -5,6 +5,7 @@ body {
 .form-control {
   background-color: #0D0F18 !important;
   color: #fff !important;
+  border-radius: 0%;
 }
 .navbar {
   width: 100% !important;
