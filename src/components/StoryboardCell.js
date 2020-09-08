@@ -109,8 +109,8 @@ export default function StoryboardCell(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <Select placeholder="Shot Type" className="custom-select mr-sm-2 form-control item-shot" value={shot} options={shots} onChange={e => {
-                                setShot(e)
+                            <Select placeholder="Shot Type" className="custom-select mr-sm-2 form-control item-shot" value={shots.find(obj => obj.value === shot)} options={shots} onChange={e => {
+                                setShot(e.value)
                             }}/>
                         </div>
                         <div className="form-group">
