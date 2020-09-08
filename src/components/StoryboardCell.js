@@ -81,7 +81,10 @@ export default function StoryboardCell(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <select class="custom-select mr-sm-2" value={shot} onChange={e => setShot(e.target.value)}>
+                            <select class="custom-select mr-sm-2" value={shot} onChange={e => {
+                                console.log(e.target.value)
+                                setShot(e.target.value)
+                            }}>
                                 <option selected>Shot Type</option>
                                 <option value="1">WS - Wide Shot</option>
                                 <option value="2">VWS - Very Wide Shot</option>
