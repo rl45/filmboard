@@ -110,7 +110,7 @@ export default function StoryboardCell(props) {
                         </div>
                         <div className="form-group">
                             <Select placeholder="Shot Type" className="custom-select mr-sm-2 form-control item-shot" value={shot} options={shots} onChange={e => {
-                                setShot(e.target.value)
+                                setShot(e)
                             }}/>
                         </div>
                         <div className="form-group">
