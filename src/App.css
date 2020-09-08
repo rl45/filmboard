@@ -231,6 +231,11 @@ font-weight: 400;
   height: 700px;
   /*border-radius: 10px;*/
 }
+.image-player {
+  width: 100%;
+  height: auto;
+  /*border-radius: 10px;*/
+}
 .audio-player {
   width: 100%;
 }
