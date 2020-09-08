@@ -81,9 +81,10 @@ export default function StoryboardCell(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2" defaultValue="Shot Type" value={shot} onChange={e => {
+                            <select className="custom-select mr-sm-2" value={shot} onChange={e => {
                                 setShot(e.target.value)
                             }}>
+                                <option disabled hidden value=''>Shot Type</option>
                                 <option value="WS">WS - Wide Shot</option>
                                 <option value="VWS">VWS - Very Wide Shot</option>
                                 <option value="MS">MS - Mid Shot</option>
@@ -93,7 +94,8 @@ export default function StoryboardCell(props) {
                             </select>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2" defaultValue="Angle" value={angle} onChange={e => setAngle(e.target.value)}>
+                            <select className="custom-select mr-sm-2" value={angle} onChange={e => setAngle(e.target.value)}>
+                                <option disabled hidden value=''>Angle</option>
                                 <option value="Eye">Eye Level</option>
                                 <option value="High">High Angle</option>
                                 <option value="Low">Low Angle</option>
@@ -104,7 +106,8 @@ export default function StoryboardCell(props) {
                             </select>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2" defaultValue="Movement" value={movement} onChange={e => setMovement(e.target.value)}>
+                            <select className="custom-select mr-sm-2" value={movement} onChange={e => setMovement(e.target.value)}>
+                                <option disabled hidden value=''>Movement</option>
                                 <option value="Static">Static</option>
                                 <option value="Pan">Pan</option>
                                 <option value="Tilt">Tilt</option>
@@ -116,7 +119,8 @@ export default function StoryboardCell(props) {
                             </select>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2" defaultValue="Audio" value={audio} onChange={e => setAudio(e.target.value)}>
+                            <select className="custom-select mr-sm-2"  value={audio} onChange={e => setAudio(e.target.value)}>
+                                <option disabled hidden value=''>Audio</option>
                                 <option value="Boom">Boom</option>
                                 <option value="Lav">Lav</option>
                                 <option value="Lav/Boom">Lav and Boom</option>
