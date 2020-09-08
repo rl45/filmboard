@@ -358,7 +358,7 @@ export default function Project(props) {
                     </div>
                     <div className="form-group">
                         <textarea type="text" className="form-control"
-                                  placeholder="Project description (optional)" rows={2}
+                                  placeholder="Project description (optional)" rows={10}
                                   value={description} onChange={e => setDescription(e.target.value)}/>
                     </div>
                 </div>
