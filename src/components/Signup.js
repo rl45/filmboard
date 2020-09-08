@@ -74,7 +74,9 @@ export default function Signup(props) {
                                     <i class="fa fa-user icon"></i>
                                     <input type="text" className="form-control input-field" id="txtSignupFullname"
                                         placeholder="Full Name" required="required" onBlur={formatFullname}
-                                        value={fullname} onChange={e => setFullname(e.target.value)} />
+                                        value={fullname} onChange={e => setFullname(e.target.value)} >
+                                             <i class="fa fa-user icon"></i>
+                                            </input>
                                 </div>
                             </div>
                             <div className="form-group">
