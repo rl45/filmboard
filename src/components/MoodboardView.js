@@ -150,7 +150,7 @@ export default function MoodboardView(props) {
                     <audio controls="controls" className="audio-player" src={playingUrl}></audio>
                 </div>
             } else if (type === 'image') {
-                return <img className="player" src={playingUrl}/>
+                return <img className="image-player" src={playingUrl}/>
             }
         }
     }
