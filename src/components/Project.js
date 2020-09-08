@@ -119,6 +119,9 @@ export default function Project(props) {
                     audio: x.querySelector(`.item-audio`).value || ''
                 });
             }
+            console.log(x.querySelector(`.item-description`))
+            console.log(x.querySelector(`.item-shot`))
+            console.log(x.querySelector(`.item-angle`))
         });
 
         // if (!moodboard || moodboard.length === 0) {
