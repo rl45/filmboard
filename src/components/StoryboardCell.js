@@ -5,6 +5,7 @@ import {
 } from "../utils/swal";
 import $ from 'jquery';
 import storyboardService from "../services/storyboard";
+import Select from 'react-select';
 
 export default function StoryboardCell(props) {
 
@@ -14,6 +15,33 @@ export default function StoryboardCell(props) {
     const [angle, setAngle] = useState('');
     const [movement, setMovement] = useState('');
     const [audio, setAudio] = useState('');
+
+    const shots = [
+        {
+          value: 'WS',
+          label: "WS - Wide Shot"
+        },
+        {
+          value: 'VWS',
+          label: "VWS - Very Wide Shot"
+        },
+        {
+          value: 'MS',
+          label: "MS - Mid Shot"
+        },
+        {
+          value: "MCU",
+          label: "MCU - Medium Close Up"
+        },
+        {
+          value: "CU",
+          label: "CU - Close-Up"
+        },
+        {
+          value: "ECU",
+          label: "ECU - Extreme Close Up"
+        }
+      ];
 
 
     useEffect(() => {
@@ -81,17 +109,9 @@ export default function StoryboardCell(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <select type="text" className="custom-select mr-sm-2 form-control item-shot" value={shot} onChange={e => {
+                            <Select placeholder="Shot Type" className="custom-select mr-sm-2 form-control item-shot" value={shot} options={shots} onChange={e => {
                                 setShot(e.target.value)
-                            }}>
-                                <option value=''>Shot Type</option>
-                                <option value="WS">WS - Wide Shot</option>
-                                <option value="VWS">VWS - Very Wide Shot</option>
-                                <option value="MS">MS - Mid Shot</option>
-                                <option value="MCU">MCU - Medium Close Up</option>
-                                <option value="CU">CU - Close-Up</option>
-                                <option value="ECU">ECU - Extreme Close Up</option>
-                            </select>
+                            }}/>
                         </div>
                         <div className="form-group">
                             <select type="text" className="custom-select mr-sm-2 form-control item-angle" value={angle} onChange={e => setAngle(e.target.value)}>
