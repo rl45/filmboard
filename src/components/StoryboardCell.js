@@ -71,12 +71,12 @@ export default function StoryboardCell(props) {
                         </div>
                         <div className="form-group">
                             <input type="text" className="form-control item-title"
-                                placeholder="Enter image title (required)"
+                                placeholder="Subject (required)"
                                 value={title} onChange={e => setTitle(e.target.value)} />
                         </div>
                         <div className="form-group">
                             <textarea type="text" className="form-control item-description"
-                                placeholder="Enter image description (optional)" rows={1}
+                                placeholder="Shot Description (Optional)" rows={1}
                                 value={description} onChange={e => setDescription(e.target.value)}>
                             </textarea>
                         </div>
