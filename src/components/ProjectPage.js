@@ -85,6 +85,8 @@ export default function ProjectPage(props) {
 
     const handleShare = e => swalShare(`${config.appUrl}/projects/${project._id}`);
 
+    
+
     return !project ? null :
         (
         <div className="container-fluid text-center mt-10">
