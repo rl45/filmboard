@@ -19,7 +19,7 @@
 }
 .story-title {
     font-size: 18px;
-    max-width: 300px;
+    max-width: 485.92px;
     margin-top: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -29,7 +29,7 @@
 }
 .story-description {
     font-size: 14px;
-    max-width: 300px;
+    max-width: 485.92px;
     overflow: hidden;
     display: -webkit-box;
     /*-webkit-line-clamp: 3;*/
