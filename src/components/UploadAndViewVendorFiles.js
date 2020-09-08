@@ -133,7 +133,7 @@ export default function UploadAndViewVendorFiles(props) {
                     </Dropzone>
                 </div>
             </div>
-            <div className="row">
+            <div className="row mt-10">
                 <div className="col-12 col-sm-12 col-md-12 text-left">
                     <span className="h6 m-2">Files uploaded by the Vendors</span>
                     <span className="comment-bar">|</span>
