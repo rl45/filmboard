@@ -81,7 +81,7 @@ export default function StoryboardCell(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2" value={shot} onChange={e => {
+                            <select className="custom-select mr-sm-2 item-shot" value={shot} onChange={e => {
                                 setShot(e.target.value)
                             }}>
                                 <option value=''>Shot Type</option>
@@ -94,7 +94,7 @@ export default function StoryboardCell(props) {
                             </select>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2" value={angle} onChange={e => setAngle(e.target.value)}>
+                            <select className="custom-select mr-sm-2 item-angle" value={angle} onChange={e => setAngle(e.target.value)}>
                                 <option value=''>Angle</option>
                                 <option value="Eye">Eye Level</option>
                                 <option value="High">High Angle</option>
@@ -106,7 +106,7 @@ export default function StoryboardCell(props) {
                             </select>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2" value={movement} onChange={e => setMovement(e.target.value)}>
+                            <select className="custom-select mr-sm-2 item-movement" value={movement} onChange={e => setMovement(e.target.value)}>
                                 <option value=''>Movement</option>
                                 <option value="Static">Static</option>
                                 <option value="Pan">Pan</option>
@@ -119,7 +119,7 @@ export default function StoryboardCell(props) {
                             </select>
                         </div>
                         <div className="form-group">
-                            <select className="custom-select mr-sm-2"  value={audio} onChange={e => setAudio(e.target.value)}>
+                            <select className="custom-select mr-sm-2 item-audio"  value={audio} onChange={e => setAudio(e.target.value)}>
                                 <option value=''>Audio</option>
                                 <option value="Boom">Boom</option>
                                 <option value="Lav">Lav</option>
