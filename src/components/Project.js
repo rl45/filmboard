@@ -120,10 +120,10 @@ export default function Project(props) {
                 });
             }
             console.log(x.querySelector(`.item-description`).value)
-            console.log(x.querySelector(`.item-shot`).value)
-            console.log(x.querySelector(`.item-angle`).value)
-            console.log(x.querySelector(`.item-movement`).value)
-            console.log(x.querySelector(`.item-audio`).value)
+            console.log(x.querySelector(`.item-shot`).value || 'Not found')
+            console.log(x.querySelector(`.item-angle`).value || 'Not found')
+            console.log(x.querySelector(`.item-movement`).value || 'Not found') 
+            console.log(x.querySelector(`.item-audio`).value || 'Not found')
         });
 
         // if (!moodboard || moodboard.length === 0) {
