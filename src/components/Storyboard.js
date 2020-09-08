@@ -42,7 +42,7 @@ export default function Storyboard(props) {
                 </div>
                 <div className="col-6 col-sm-6 text-right">
                     <button className="btn btn-sm btn-outline-light m-1"
-                            onClick={() => handleAddMore()}>Add Cell
+                            onClick={() => handleAddMore()}>Add Shot
                     </button>
                 </div>
             </div>

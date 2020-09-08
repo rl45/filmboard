@@ -71,6 +71,17 @@ export default function StoryboardCell(props) {
                                 value={description} onChange={e => setDescription(e.target.value)}>
                             </textarea>
                         </div>
+                        <div className="form-group">
+                            <select class="custom-select mr-sm-2">
+                                <option selected>Shot Type</option>
+                                <option value="1">WS - Wide Shot</option>
+                                <option value="2">VWS - Very Wide Shot</option>
+                                <option value="3">MS - Mid Shot</option>
+                                <option value="4">MCU - Medium Close Up</option>
+                                <option value="3">CU - Close-Up</option>
+                                <option value="3">ECU - Extreme Close Up</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
