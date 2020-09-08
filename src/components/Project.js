@@ -343,8 +343,8 @@ export default function Project(props) {
                     </button>
                     {
                         project && project._id &&
-                        <button className="btn btn-danger m-1 deleteButton"
-                                onClick={handleDeleteProject}>Delete this project
+                        <button className="btn btn-danger m-1"
+                                onClick={handleDeleteProject}>Delete
                         </button>
                     }
                 </div>
