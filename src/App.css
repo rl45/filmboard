@@ -143,6 +143,14 @@ body {
   height: 250px;
 }
 
+.icon {
+  padding: 10px;
+  background: transparent;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
 .badge {
 font-weight: 400;
 }
